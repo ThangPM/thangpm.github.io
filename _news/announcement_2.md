@@ -1,12 +1,39 @@
 ---
 layout: post
 title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
-inline: false
+date: 2024-06-24
+# inline: false
+inline: true
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+<style>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blink {
+  animation: blink 1.5s infinite;
+  color: #FF4081;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 2px 2px;
+  border-radius: 4px;
+  /* background: rgba(255, 64, 129, 0.1); */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+</style>
+
+<span class="blink">[new]</span> 🎯 Joined [Adobe Research](https://research.adobe.com/) for my third internship on efficient LLMs for mobile devices on document assistance tasks.
+
+<!-- Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
 
 ---
 
@@ -30,4 +57,4 @@ Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxide
 > We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
 > —Anais Nin
 
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual. -->

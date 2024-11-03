@@ -7,3 +7,32 @@
 
 "Vision":
   color: "#009f36"
+
+"NAACL":
+  url: https://naacl.org/
+  color: "#009f36"
+
+"EACL":
+  url: https://eacl.org/general/#welcome
+  color: "#009f36"
+
+"ACL":
+  url: https://www.aclweb.org/portal/what-is-cl
+  color: "#009f36"
+
+"EMNLP":
+  url: https://www.aclweb.org/portal/what-is-cl
+  color: "#009f36"
+
+"AACL":
+  url: https://aaclnet.org/
+  color: "#009f36"
+
+"EMNLP-BioNLP":
+  url: https://2019.bionlp-ost.org/
+  color: "#b509ac"
+
+"SEPLN-IberLEF":
+  url: https://temu.bsc.es/meddocan/
+  color: "#b509ac"
+

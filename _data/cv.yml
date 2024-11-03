@@ -2,96 +2,153 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Thang Minh Pham
+    - name: Contact
+      value: pmthangk09 [at] gmail [dot] com
     - name: Languages
-      value: English, German
+      value: Vietnamese (Native), English (Fluent)
+
+- title: Research Areas
+  type: list
+  contents:
+  - "I'm particularly interested in making AI systems more interpretable and efficient, recently developing SlimLM models for on-device document assistance and creating methods to enhance the explainability and robustness of language models in NLP and CV tasks. My current research focuses on developing efficient small language models and model optimization techniques for mobile devices, building robust retrieval-augmented generation (RAG) systems and multi-agent architectures."
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+   - title: Ph.D. in Computer Science (ML/AI)
+     institution: Auburn University, AL, USA
+     year: 2019 - 2024
+     description:
+       - 'Advised by <a href="https://anhnguyen.me" target="_blank"><b>Prof. Anh Nguyen</b></a>'
+       - 'GPA: 3.91/4.0'
+       - 'Thesis: <i>Improving Interpretability and Accuracy of Artificial Intelligence in Natural Language and Image Understanding</i>'
+   - title: B.S. (Honours) in Computer Science and Engineering
+     institution: University of Science (HCMUS), Ho Chi Minh City, Vietnam
+     year: 2009 - 2013
+     description:
+       - 'Advised by <a href="https://www.fit.hcmus.edu.vn/~ttson/" target="_blank"><b>Dr. Son Tran</b></a>'
+       - 'GPA: 3.39/4.0'
+       - 'Thesis: <i>Scene Text Detection and Recognition (Distinction)</i>'
 
-- title: Experience
+- title: Work Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+   - title: Research Scientist Intern at Adobe Reseach
+     year: 06/2024 - now
+     description:
+       - Quantizes and deploys LLMs (∼0.1–7 billion parameters) locally on mobile devices for benchmarking. 
+       - Proposes SlimLM models (∼0.05–3 billion parameters), pre-trained from scratch on ∼1–5 trillion tokens using datasets such as SlimPajama, FineWeb, DCLM or SmolLM. 
+       - Finetunes and evaluates SlimLM and baseline models for Q/A, question suggestion and summarization for documents.
+       - Develops a mobile application for PDF reader with AI assistant to demonstrate the efficiency of SlimLM on documents.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+   - title: Research Scientist Intern at Adobe Reseach
+     year: 09/2023 - 01/2024
+     description:
+       - Crawled and analyzed trends in Reddit's image editing requests. 
+       - Constructed an instruction-following dataset and a human preference data to teach large language models (LLMs) to use visual foundation models for handling image editing requests.
+       - Fine-tuned open-source LLMs (e.g., LLaMA-2, Mistral, Zephyr, Falcon, MPT) across different versions (7B, 13B, 70B) to correctly generate and execute a plan including a sequence of image editing tools to handle simple, complex and implicit user requests for Adobe products (e.g., Photoshop).
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
+   - title: Research Scientist Intern at Adobe Reseach
+     year: 05/2021 - 11/2021
+     description:
+       - Developed a deep neural model for phrase representation. 
+       - Designed a human annotation guideline and led the team (∼15 people) to construct a dataset and benchmark to enhance and evaluate in-context phrase representation for semantic search. 
+       - Fine-tuned and evaluate small and large language models in understanding phrases in context. 
+       - Developed a smart phrase search system that is potentially utilized in the Acrobat product.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+   - title: ML/AI Research Engineer at AIST Japan
+     year: 05/2017 - 08/2019
+     description:
+       - Investigated state-of-the-art deep learning models for named entity recognition (NER), relation and event extraction in biomedical domain. 
+       - Implemented novel deep neural networks for NER task with Dr. Sohrab (EMNLP 2018) and Dr. Ju (NAACL 2018). 
+       - Developed the DeepEventMine system with Dr. Trieu in the first phase of the project. 
+       - Fine-tuned hyper-parameters with greedy search and Bayesian optimization methods. 
+       - Pre-processed biomedical corpora (JNLPBA2004, GENIA, ACE2005, CG2013, MLEE, PHAEDRA). 
+       - Optimized parallel computing with multiple GPUs for speeding up a model training process. 
+       - Collaborated with Dr. Nagano to create the EzCat database. 
+       - Developed pipelines to evaluate EventMine systems for NaCTeM (University of Manchester).
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+   - title: Senior Software Engineer at OPSWAT Vietnam (now Beowulf)
+     year: 01/2014 - 05/2017
+     description:
+       - Developed over-the-top mobile applications (VoxyPAD, Tutorica, Victoria and Hana). 
+       - Worked directly with CEO and other team leaders to design APIs for the whole systems. 
+       - Supported clients in the United States and in Japan (Toshiba corporation) to deploy our products.
+
+   - title: Software Engineer at VoxyPAD Vietnam (now Beowulf)
+     year: 08/2013 - 12/2013
+     description:
+        - Developed a back-end system using Spring framework to provide user account management for virtual RADIUS servers. 
+        - Developed a socket server for an over-the-top application to send and receive messages via socket.
+
+# - title: Open Source Projects
+#   type: time_table
+#   contents:
+#    - title: <a href="https://github.com/pmthangk09/peeb">PEEB</a>
+#      year: 2024
+#      description: Part-based Bird Classifiers With Explainable Language Bottleneck
+#    - title: <a href="https://github.com/pmthangk09/slimlm">SlimLM</a>
+#      year: 2024  
+#      description: Efficient Small Language Models for On-Device Document Assistance
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+   - year: 2023
+     items: 
+       - Diversity and Inclusion Award, EACL 2023.
+       - Graduate Student Council Travel Fellowship.
+   - year: 2019 - 2024
+     items:
+       - Auburn University Graduate Assistantship.
+   - year: 2009 - 2013  
+     items:
+       - University of Science Faculty of IT Excellence Fellowship.
+   - year: 2009
+     items:
+       - Top-3 university entrance award from high school.
 
-- title: Academic Interests
-  type: nested_list
+# - title: Academic Interests
+#   type: nested_list
+#   contents:
+#    - title: Large Language Models
+#      items:
+#        - Efficient LLMs and Model Optimization
+#        - Retrieval-Augmented Generation (RAG)
+#        - Multi-Agent Systems
+#    - title: Natural Language Processing
+#      items:
+#        - Document Understanding and Processing
+#        - Language Model Evaluation
+#        - Information Extraction
+
+- title: Professional and Volunteering Services
+  type: time_table
   contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+   - year: 2024
+     items:
+       - 'I am a reviewer for the following conferences: NeurIPS, ACL, EMNLP, NAACL.'
+   - year: 2023
+     items:
+       - 'I was a reviewer for the following conferences: NeurIPS, ICLR, ACL, EMNLP, EACL.'
+   - year: 08/2022 - 05/2023
+     items:
+       - 'I was a youth program personnel for <a href="https://anhnguyen.me/k6-ai-club/" target="_blank">K-6 AI Club</a>.'
+   - year: 2022
+     items:
+       - 'I was a reviewer for the following conferences: NeurIPS, EMNLP.'
+
+- title: Technical Skills
+  type: list
+  contents:
+   - <b>Programming Languages:</b> Python, Java, C++, C#, PHP, Javascript.
+   - <b>Deep Learning Frameworks:</b> PyTorch, TensorFlow, Chainer.
+   - <b>NLP Tools:</b> NLTK, SciPy, spaCy, Pandas, Brat Annotation, Argo, EventMine.
+   - <b>Databases:</b> MySQL, PostgreSQL, MongoDB.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+   - <b>Sports:</b> Soccer, Tennis, Badminton, Swimming.
+   - <b>Hobbies:</b> Traveling and Gaming.

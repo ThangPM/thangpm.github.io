@@ -1,34 +1,69 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"bui":
+  - firstname: ["Trung"]
+    url: https://research.adobe.com/person/trung-bui/
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"dernoncourt":
+  - firstname: ["Franck"]
+    url: https://research.adobe.com/person/franck-dernoncourt/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"nguyen":
+  - firstname: ["Anh", "Anh Totti"]
+    url: https://anhnguyen.me/
+  
+  - firstname: ["Giang"]
+    url: https://giangnguyen2412.github.io/about/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+  - firstname: ["Tin"]
+    url: https://ngthanhtin.github.io/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"van nguyen":
+  - firstname: ["Chien"]
+    url: https://chiennv2000.github.io/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"yoon":
+  - firstname: ["David", "David Seunghyun", "Seunghyun"]
+    url: https://research.adobe.com/person/david-seunghyun-yoon/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"miwa":
+  - firstname: ["Makoto"]
+    url: https://www.toyota-ti.ac.jp/Lab/kde/members/makoto.miwa/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"sohrab":
+  - firstname: ["Mohammad", "Mohammad Golam", "Mohammad G."]
+    url: https://www.linkedin.com/in/mohammad-golam-sohrab-ph-d-04566668/?originalSubdomain=jp
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"mai":
+  - firstname: ["Long"]
+    url: https://mai-t-long.com/
+
+"takamura":
+  - firstname: ["Hiroya"]
+    url: https://sites.google.com/view/hjtakamura/home?authuser=0
+
+"dinh":
+  - firstname: ["Dien"]
+    url: https://en.hcmus.edu.vn/profile/assoc-prof-dr-dinh-dien/
+
+"chen":
+  - firstname: ["Peijie"]
+    url: https://www.linkedin.com/in/chen-peijie-3897b8211
+
+"lai":
+  - firstname: ["Viet", "Viet Dac"]
+    url: https://laiviet.github.io/
+
+"zhang":
+  - firstname: ["Ruiyi"]
+    url: https://zhangry868.github.io/
+
+"deilamsalehy":
+  - firstname: ["Hanieh"]
+    url: https://research.adobe.com/person/hanieh-deilamsalehy/
+
+"mathur":
+  - firstname: ["Puneet"]
+    url: https://themadaiguy.github.io/
+
+"rossi":
+  - firstname: ["Ryan", "Ryan A.", "Ryan A"]
+    url: https://research.adobe.com/person/ryan-rossi/

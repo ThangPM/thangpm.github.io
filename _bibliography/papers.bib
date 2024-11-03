@@ -1,115 +1,167 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@article{pham2024slimlm,
+  title={SlimLM: An Efficient Small Language Model for On-Device Document Assistance},
+  author={Pham, Thang and Nguyen, Phat T and Yoon, Seunghyun and Lai, Viet Dac and Dernoncourt, Franck and Bui, Trung},
+  journal={arXiv preprint},
+  year={2024},
+  abbr = {arXiv},
+  abstract = "While small language models (SLMs) show promises for mobile deployment, their real-world performance and applications on smartphones remains underexplored. We present SlimLM, a series of SLMs optimized for document assistance tasks on mobile devices. Through extensive experiments on a Samsung Galaxy S24, we identify the optimal trade-offs between model size (ranging from 125M to 7B parameters), context length, and inference time for efficient on-device processing. SlimLM is pre-trained on SlimPajama-627B and fine-tuned on DocAssist, our constructed dataset for summarization, question answering and suggestion tasks. Our smallest model demonstrates efficient performance on S24, while larger variants offer enhanced capabilities within mobile constraints. We evaluate SlimLM against existing SLMs, showing comparable or superior performance and offering a benchmark for future research in on-device language models. We also provide an Android application, offering practical insights into SLM deployment. Our findings provide valuable insights and illuminate the capabilities of running advanced language models on high-end smartphones, potentially reducing server costs and enhancing privacy through on-device processing."
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@article{van2024taipan,
+  title={Taipan: Efficient and Expressive State Space Language Models with Selective Attention},
+  author={Van Nguyen, Chien and Nguyen, Huy Huu and Pham, Thang and Zhang, Ruiyi and Deilamsalehy, Hanieh and Mathur, Puneet and Rossi, Ryan A and Bui, Trung and Lai, Viet Dac and Dernoncourt, Franck and others},
+  journal={arXiv preprint arXiv:2410.18572},
+  year={2024},
+  abbr = {arXiv},
+  arxiv = {2410.18572},
+  abstract = "Efficient long-context language modeling remains a significant challenge in Natural Language Processing (NLP). While Transformers dominate language tasks, they struggle with long sequences due to quadratic computational complexity in training and linearly scaling memory costs during inference. Recent State Space Models (SSMs) such as Mamba offer alternatives with constant memory usage, but they underperform in tasks requiring extensive in-context retrieval. We introduce Taipan, a novel hybrid architecture that combines Mamba-2 with Selective Attention Layers (SALs). These SALs identify tokens requiring long-range interactions, remove less important features, and then augment their representations using the attention module. This approach balances Mamba's efficiency with Transformer-like performance in memory-intensive tasks. By constraining the attention budget, Taipan extends accurate predictions to context lengths of up to 1 million tokens while preserving computational efficiency. Our experiments demonstrate Taipan's superior performance across various scales and tasks, offering a promising solution for efficient long-context language modeling."
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@inproceedings{pham-etal-2024-peeb,
+    title = "{PEEB}: Part-based Image Classifiers with an Explainable and Editable Language Bottleneck",
+    author = "Pham*, Thang  and
+      Chen*, Peijie  and
+      Nguyen*, Tin  and
+      Yoon, Seunghyun  and
+      Bui, Trung  and
+      Nguyen, Anh",
+    editor = "Duh, Kevin  and
+      Gomez, Helena  and
+      Bethard, Steven",
+    booktitle = "Findings of the Association for Computational Linguistics: NAACL 2024",
+    month = jun,
+    year = "2024",
+    address = "Mexico City, Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.findings-naacl.131",
+    pages = "2018--2053",
+    abstract = "CLIP-based classifiers rely on the prompt containing a class name that is known to the text encoder. Therefore, they perform poorly on new classes or the classes whose names rarely appear on the Internet (e.g., scientific names of birds). For fine-grained classification, we propose PEEB {--} an explainable and editable classifier to (1) express the class name into a set of text descriptors that describe the visual parts of that class; and (2) match the embeddings of the detected parts to their textual descriptors in each class to compute a logit score for classification. In a zero-shot setting where the class names are unknown, PEEB outperforms CLIP by a huge margin (∼10{\mbox{$\times$}} in top-1 accuracy). Compared to part-based classifiers, PEEB is not only the state-of-the-art (SOTA) on the supervised-learning setting (88.80{\%} and 92.20{\%} accuracy on CUB-200 and Stanford Dogs-120, respectively) but also the first to enable users to edit the text descriptors to form a new classifier without any re-training. Compared to concept bottleneck models, PEEB is also the SOTA in both zero-shot and supervised-learning settings.",    
+    abbr = {NAACL},
+    pdf = {https://aclanthology.org/2024.findings-naacl.131.pdf},
+    code = {https://github.com/anguyen8/peeb},
+    slides = {https://app.underline.io/downloadable_materials/lectures/97581/slideshow},
+    video = {https://underline.io/lecture/97581-peeb-part-based-image-classifiers-with-an-explainable-and-editable-language-bottleneck},
+    demo = {https://huggingface.co/spaces/XAI/PEEB},
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@inproceedings{pham-etal-2023-pic,
+    title = "{P}i{C}: A Phrase-in-Context Dataset for Phrase Understanding and Semantic Search",
+    author = "Pham, Thang  and
+      Yoon, Seunghyun  and
+      Bui, Trung  and
+      Nguyen, Anh",
+    editor = "Vlachos, Andreas  and
+      Augenstein, Isabelle",
+    booktitle = "Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics",
+    month = may,
+    year = "2023",
+    address = "Dubrovnik, Croatia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.eacl-main.1",
+    pages = "1--26",
+    abstract = "While contextualized word embeddings have been a de-facto standard, learning contextualized phrase embeddings is less explored and being hindered by the lack of a human-annotated benchmark that tests machine understanding of phrase semantics given a context sentence or paragraph (instead of phrases alone). To fill this gap, we propose PiC{---}a dataset of ∼28K of noun phrases accompanied by their contextual Wikipedia pages and a suite of three tasks for training and evaluating phrase embeddings. Training on PiC improves ranking-models{'} accuracy and remarkably pushes span selection (SS) models (i.e., predicting the start and end index of the target phrase) near human accuracy, which is 95{\%} Exact Match (EM) on semantic search given a query phrase and a passage. Interestingly, we find evidence that such impressive performance is because the SS models learn to better capture the common meaning of a phrase regardless of its actual context. SotA models perform poorly in distinguishing two senses of the same phrase in two contexts (∼60{\%} EM) and in estimating the similarity between two different phrases in the same context (∼70{\%} EM).",
+    abbr = {EACL},
+    pdf = {https://aclanthology.org/2023.eacl-main.1.pdf},
+    code = {https://github.com/Phrase-in-Context},
+    video = {https://aclanthology.org/2023.eacl-main.1.mp4},
+    website = {https://phrase-in-context.github.io/},
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@article{pham2023semi,
+  title={Semi-supervised Neural Machine Translation with Consistency Regularization for Low-Resource Languages},
+  author={Pham, Viet H and Pham*, Thang and Nguyen*, Giang and Nguyen, Long and Dinh, Dien},
+  journal={arXiv preprint arXiv:2304.00557},
+  year={2023},
+  abbr = {arXiv},
+  arxiv = {2304.00557},
+  abstract = "The advent of deep learning has led to a significant gain in machine translation. However, most of the studies required a large parallel dataset which is scarce and expensive to construct and even unavailable for some languages. This paper presents a simple yet effective method to tackle this problem for low-resource languages by augmenting high-quality sentence pairs and training NMT models in a semi-supervised manner. Specifically, our approach combines the cross-entropy loss for supervised learning with KL Divergence for unsupervised fashion given pseudo and augmented target sentences derived from the model. We also introduce a SentenceBERT-based filter to enhance the quality of augmenting data by retaining semantically similar sentence pairs. Experimental results show that our approach significantly improves NMT baselines, especially on low-resource datasets with 0.46--2.03 BLEU scores. We also demonstrate that using unsupervised training for augmented data is more efficient than reusing the ground-truth target sentences for supervised learning.",
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@inproceedings{pham-etal-2022-double,
+    title = "Double Trouble: How to not Explain a Text Classifier{'}s Decisions Using Counterfactuals Synthesized by Masked Language Models?",
+    author = "Pham, Thang  and
+      Bui, Trung  and
+      Mai, Long  and
+      Nguyen, Anh",
+    editor = "He, Yulan  and
+      Ji, Heng  and
+      Li, Sujian  and
+      Liu, Yang  and
+      Chang, Chua-Hui",
+    booktitle = "Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = nov,
+    year = "2022",
+    address = "Online only",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.aacl-main.2",
+    pages = "12--31",
+    abstract = "A principle behind dozens of attribution methods is to take the prediction difference between before-and-after an input feature (here, a token) is removed as its attribution. A popular Input Marginalization (IM) method (Kim et al., 2020) uses BERT to replace a token, yielding more plausible counterfactuals. While Kim et al., 2020 reported that IM is effective, we find this conclusion not convincing as the Deletion-BERT metric used in their paper is biased towards IM. Importantly, this bias exists in Deletion-based metrics, including Insertion, Sufficiency, and Comprehensiveness. Furthermore, our rigorous evaluation using 6 metrics and 3 datasets finds no evidence that IM is better than a Leave-One-Out (LOO) baseline. We find two reasons why IM is not better than LOO: (1) deleting a single word from the input only marginally reduces a classifier{'}s accuracy; and (2) a highly predictable word is always given near-zero attribution, regardless of its true importance to the classifier. In contrast, making LIME samples more natural via BERT consistently improves LIME accuracy under several ROAR metrics.",
+    abbr = {AACL},
+    pdf = {https://aclanthology.org/2022.aacl-main.2.pdf},
+    code = {https://github.com/anguyen8/im},
+    slides = {https://auburn.edu/~tmp0038/AACL2022_Double_Trouble_Slides.pdf},
+    video = {https://youtu.be/lpOWV9mXFGo},
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{pham-etal-2021-order,
+    title = "Out of Order: How important is the sequential order of words in a sentence in Natural Language Understanding tasks?",
+    author = "Pham, Thang  and
+      Bui, Trung  and
+      Mai, Long  and
+      Nguyen, Anh",
+    editor = "Zong, Chengqing  and
+      Xia, Fei  and
+      Li, Wenjie  and
+      Navigli, Roberto",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-acl.98",
+    pages = "1145--1160",
+    abstract = "Do state-of-the-art natural language understanding models care about word order - one of the most important characteristics of a sequence? Not always! We found 75% to 90% of the correct predictions of BERT-based classifiers, trained on many GLUE tasks, remain constant after input words are randomly shuffled. Despite BERT embeddings are famously contextual, the contribution of each individual word to downstream tasks is almost unchanged even after the word's context is shuffled. BERT-based models are able to exploit superficial cues (e.g. the sentiment of keywords in sentiment analysis; or the word-wise similarity between sequence-pair inputs in natural language inference) to make correct decisions when tokens are arranged in random orders. Encouraging classifiers to capture word order information improves the performance on most GLUE tasks, SQuAD 2.0 and out-of-samples. Our work suggests that many GLUE tasks are not challenging machines to understand the meaning of a sentence.",
+    abbr = {ACL},
+    pdf = {https://aclanthology.org/2021.findings-acl.98.pdf},
+    code = {https://github.com/anguyen8/out-of-order},
+    slides = {https://auburn.edu/~tmp0038/ACL2021_Out_of_Order_Slides.pdf},
+    video = {https://aclanthology.org/2021.findings-acl.98.mp4},
 }
 
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+@inproceedings{sohrab-etal-2019-neural,
+    title = "A Neural Pipeline Approach for the {P}harma{C}o{NER} Shared Task using Contextual Exhaustive Models",
+    author = "Sohrab, Mohammad Golam  and
+      Pham, Thang  and
+      Miwa, Makoto  and
+      Takamura, Hiroya",
+    editor = "Jin-Dong, Kim  and
+      Claire, N{\'e}dellec  and
+      Robert, Bossy  and
+      Louise, Del{\'e}ger",
+    booktitle = "Proceedings of the 5th Workshop on BioNLP Open Shared Tasks",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D19-5708",
+    pages = "47--55",
+    abstract = "We present a neural pipeline approach that performs named entity recognition (NER) and concept indexing (CI), which links them to concept unique identifiers (CUIs) in a knowledge base, for the PharmaCoNER shared task on pharmaceutical drugs and chemical entities. We proposed a neural NER model that captures the surrounding semantic information of a given sequence by capturing the forward- and backward-context of bidirectional LSTM (Bi-LSTM) output of a target span using contextual span representation-based exhaustive approach. The NER model enumerates all possible spans as potential entity mentions and classify them into entity types or no entity with deep neural networks. For representing span, we compare several different neural network architectures and their ensembling for the NER model. We then perform dictionary matching for CI and, if there is no matching, we further compute similarity scores between a mention and CUIs using entity embeddings to assign the CUI with the highest score to the mention. We evaluate our approach on the two sub-tasks in the shared task. Among the five submitted runs, the best run for each sub-task achieved the F-score of 86.76{\%} on Sub-task 1 (NER) and the F-score of 79.97{\%} (strict) on Sub-task 2 (CI).",
+    abbr = {EMNLP-BioNLP},
+    pdf = {https://aclanthology.org/D19-5708.pdf},
+    video = {https://vimeo.com/370691407},
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@inproceedings{Sohrab2019AGN,
+  title={A Generic Neural Exhaustive Approach for Entity Recognition and Sensitive Span Detection},
+  author={Mohammad Golam Sohrab and Thang Pham and Makoto Miwa},
+  booktitle={IberLEF@SEPLN},
+  year={2019},
+  url={https://api.semanticscholar.org/CorpusID:199448508},
+  abstract = "In this work, we present a deep exhaustive framework for the MEDDOCAN shared task. The framework employs a generic named entity recognition (NER) model that captures the underlying semantic information of texts. The key idea of our model is to enumerate all possible spans as potential entity mentions and classify them with deep neural networks. We introduce different sets of learning algorithms, including base representation(BR) average (BR-Avg), BR with attention mechanigm (BR-Attn), LSTM-Minus-based average (LM-Avg), LSTMMinus-based attention (LM-Attn), where with or without context is used after LSTM layer (Context or None) and an ensemble approach using maximumvoting of all the approaches. We evaluate our exhaustive model on two sub-tasks in the MEDDOCAN shared task in medical domain using the official evaluation script. Among the five submitted runs, the best run for each sub-task achieved the F-score of 93.12% on Sub-task 1 and the F-scores of 93.52% (strict) and 94.92% (merged) on Sub-task 2 without any external knowledge resources.",
+  abbr = {SEPLN-IberLEF},
+  pdf = {http://ceur-ws.org/Vol-2421/MEDDOCAN_paper_13.pdf},
 }
+

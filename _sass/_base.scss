@@ -723,7 +723,8 @@ footer.sticky-bottom {
 
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          color: var(--global-author-text-color);                           // ThangPM: Force the author name to be grey
+          border-bottom: 1px dashed var(--global-author-text-color);
 
           &:hover {
             border-bottom-style: solid;
@@ -732,8 +733,12 @@ footer.sticky-bottom {
         }
 
         > em {
-          border-bottom: 1px solid;
+          // ThangPM: Custom CSS to highlight the author name in publications
+          // border-bottom: 1px solid;
+          // font-style: normal;
+          font-weight: bold;
           font-style: normal;
+          color: $blue-color;
         }
 
         > span.more-authors {
@@ -1304,3 +1309,4 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
