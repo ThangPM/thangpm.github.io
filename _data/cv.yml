@@ -34,7 +34,7 @@
 - title: Work Experience
   type: time_table
   contents:
-   - title: Research Scientist Intern at Adobe Reseach
+   - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Reseach</a>
      year: 06/2024 - now
      description:
        - Quantizes and deploys LLMs (∼0.1–7 billion parameters) locally on mobile devices for benchmarking. 
@@ -42,14 +42,14 @@
        - Finetunes and evaluates SlimLM and baseline models for Q/A, question suggestion and summarization for documents.
        - Develops a mobile application for PDF reader with AI assistant to demonstrate the efficiency of SlimLM on documents.
 
-   - title: Research Scientist Intern at Adobe Reseach
+   - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Reseach</a>
      year: 09/2023 - 01/2024
      description:
        - Crawled and analyzed trends in Reddit's image editing requests. 
        - Constructed an instruction-following dataset and a human preference data to teach large language models (LLMs) to use visual foundation models for handling image editing requests.
        - Fine-tuned open-source LLMs (e.g., LLaMA-2, Mistral, Zephyr, Falcon, MPT) across different versions (7B, 13B, 70B) to correctly generate and execute a plan including a sequence of image editing tools to handle simple, complex and implicit user requests for Adobe products (e.g., Photoshop).
 
-   - title: Research Scientist Intern at Adobe Reseach
+   - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Reseach</a>
      year: 05/2021 - 11/2021
      description:
        - Developed a deep neural model for phrase representation. 
@@ -57,26 +57,26 @@
        - Fine-tuned and evaluate small and large language models in understanding phrases in context. 
        - Developed a smart phrase search system that is potentially utilized in the Acrobat product.
 
-   - title: ML/AI Research Engineer at AIST Japan
+   - title: ML/AI Research Engineer at <a href="https://www.aist.go.jp/index_en.html" target="_blank">AIST Japan</a>
      year: 05/2017 - 08/2019
      description:
        - Investigated state-of-the-art deep learning models for named entity recognition (NER), relation and event extraction in biomedical domain. 
-       - Implemented novel deep neural networks for NER task with Dr. Sohrab (EMNLP 2018) and Dr. Ju (NAACL 2018). 
-       - Developed the DeepEventMine system with Dr. Trieu in the first phase of the project. 
+       - Implemented novel deep neural networks for NER task with <a href="https://www.linkedin.com/in/mohammad-golam-sohrab-ph-d-04566668?originalSubdomain=jp" target="_blank">Dr. Sohrab</a> (EMNLP 2018) and <a href="https://www.linkedin.com/in/meizhi-ju-53b13b108/?originalSubdomain=uk" target="_blank">Dr. Ju</a> (NAACL 2018). 
+       - Developed the DeepEventMine system with <a href="https://www.linkedin.com/in/long-trieu/?originalSubdomain=vn" target="_blank">Dr. Trieu</a> in the first phase of the project. 
        - Fine-tuned hyper-parameters with greedy search and Bayesian optimization methods. 
        - Pre-processed biomedical corpora (JNLPBA2004, GENIA, ACE2005, CG2013, MLEE, PHAEDRA). 
        - Optimized parallel computing with multiple GPUs for speeding up a model training process. 
-       - Collaborated with Dr. Nagano to create the EzCat database. 
-       - Developed pipelines to evaluate EventMine systems for NaCTeM (University of Manchester).
+       - Collaborated with <a href="https://cbrc3.cbrc.pj.aist.go.jp/~nagano/" target="_blank">Dr. Nagano</a> to create the EzCat database. 
+       - Developed pipelines to evaluate <a href="https://www.nactem.ac.uk/EventMine/" target="_blank">EventMine systems</a> for <a href="https://www.nactem.ac.uk/index.php" target="_blank">NaCTeM (University of Manchester)</a>.
 
-   - title: Senior Software Engineer at OPSWAT Vietnam (now Beowulf)
+   - title: Senior Software Engineer at OPSWAT Vietnam (now <a href="https://beowulfchain.com/" target="_blank">Beowulf</a>)
      year: 01/2014 - 05/2017
      description:
-       - Developed over-the-top mobile applications (VoxyPAD, Tutorica, Victoria and Hana). 
-       - Worked directly with CEO and other team leaders to design APIs for the whole systems. 
+       - Developed <a href="https://beowulfchain.com/" target="_blank">over-the-top mobile applications</a> (<a href="https://www.edn.com/voxypad-app-provides-collaborative-telecommunication-across-devices/" target="_blank">VoxyPAD</a>, <a href="https://www.facebook.com/tutoricaVN/" target="_blank">Tutorica</a>, <a href="https://apps.apple.com/us/app/victoria-platform/id1216613687" target="_blank">Victoria</a> and <a href="https://hana.beowulfchain.com/" target="_blank">Hana</a>). 
+       - Worked directly with <a href="https://www.linkedin.com/in/williamhnguyen/" target="_blank">CEO Dr. William Nguyen</a> and other team leaders to design APIs for the whole systems. 
        - Supported clients in the United States and in Japan (Toshiba corporation) to deploy our products.
 
-   - title: Software Engineer at VoxyPAD Vietnam (now Beowulf)
+   - title: Software Engineer at VoxyPAD Vietnam (now <a href="https://beowulfchain.com/" target="_blank">Beowulf</a>)
      year: 08/2013 - 12/2013
      description:
         - Developed a back-end system using Spring framework to provide user account management for virtual RADIUS servers. 

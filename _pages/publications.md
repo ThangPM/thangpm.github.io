@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: "* denotes equal contribution and joint lead authorship."
+description: "<nobr><em>*</em></nobr> denotes equal contribution and joint lead authorship." # For an up-to-date list of my research papers, please see my Google Scholar profile.
 nav: true
 nav_order: 2
 ---

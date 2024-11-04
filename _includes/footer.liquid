@@ -1,5 +1,7 @@
 {% if site.footer_fixed %}
-  <footer class="fixed-bottom" role="contentinfo" style="height: 25px; display: flex; align-items: center; justify-content: center;">
+  {% comment %} ThangPM: Enable this to fix the footer height
+  <footer class="fixed-bottom" role="contentinfo" style="height: 25px; display: flex; align-items: center; justify-content: center;"> {% endcomment %}
+  <footer class="fixed-bottom" role="contentinfo">  
     <div class="container mt-0">
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
@@ -9,12 +11,14 @@
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
       {% endif %}
       {% if site.last_updated %}
-        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+        Last updated: {{ 'now' | date: '%B %d, %Y'}}.
       {% endif %}
     </div>
   </footer>
 {% else %}
-  <footer class="sticky-bottom mt-5" role="contentinfo" style="height: 25px; display: flex; align-items: center; justify-content: center;">
+  {% comment %} ThangPM: Enable this to fix the footer height
+  <footer class="sticky-bottom mt-5" role="contentinfo" style="height: 25px; display: flex; align-items: center; justify-content: center;"> {% endcomment %}
+  <footer class="sticky-bottom mt-5" role="contentinfo"></footer>
     {% if site.newsletter.enabled %}
       {% include scripts/newsletter.liquid %}
     {% endif %}
@@ -28,7 +32,7 @@
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
       {% endif %}
       {% if site.last_updated %}
-        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+        Last updated: {{ 'now' | date: '%B %d, %Y'}}.
       {% endif %}
     </div>
   </footer>

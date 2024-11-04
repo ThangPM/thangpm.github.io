@@ -6,7 +6,7 @@ subtitle: Auburn, Alabama, USA   # <a href='#'>Affiliations</a>. Address. Contac
 
 profile:
   align: right
-  image: thang_avatar.jpg  # prof_pic.jpg
+  image: thang_avatar_otw.jpg  # prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: # >
     # <p>555 your office number</p>

@@ -736,6 +736,7 @@ footer.sticky-bottom {
           // ThangPM: Custom CSS to highlight the author name in publications
           // border-bottom: 1px solid;
           // font-style: normal;
+
           font-weight: bold;
           font-style: normal;
           color: $blue-color;
@@ -1309,4 +1310,13 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+
+// ThangPM: Custom CSS to highlight the author name in publications
+nobr > em {
+  font-weight: bold;
+  font-style: normal;
+  color: $blue-color;
+}
+
 

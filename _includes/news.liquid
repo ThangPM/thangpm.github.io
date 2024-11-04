@@ -1,4 +1,4 @@
-<div class="news">
+{% comment %} <div class="news">
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
     <div
@@ -28,6 +28,66 @@
         {% endfor %}
       </table>
     </div>
+  {% else %}
+    <p>No news so far...</p>
+  {% endif %}
+</div> {% endcomment %}
+
+<div class="news">
+  {% if site.news != blank %}
+    {% assign news = site.news | reverse %}
+    {% assign news_size = site.news | size %}
+    
+    <!-- Initial visible news items -->
+    <div class="table-responsive">
+      {% if include.limit and site.announcements.limit %}
+        {% assign news_limit = site.announcements.limit %}
+      {% else %}
+        {% assign news_limit = news_size %}
+      {% endif %}
+      
+      <table class="table table-sm table-borderless">
+        {% for item in news limit: news_limit %}
+          <tr>
+            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <td>
+              {% if item.inline %}
+                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+              {% else %}
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <!-- Older news button and content -->
+    {% if news_size > site.announcements.limit %}
+      <p>
+        <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#oldnews_button" aria-expanded="false" aria-controls="oldnews_button">
+          <span style="font-size:small; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">older news</span>
+        </button>
+      </p>
+      <div class="collapse" id="oldnews_button">
+        <div class="table-responsive">
+          <table class="table table-sm table-borderless">
+            {% for item in news offset: news_limit %}
+              <tr>
+                <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+                <td>
+                  {% if item.inline %}
+                    {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  {% else %}
+                    <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    {% endif %}
   {% else %}
     <p>No news so far...</p>
   {% endif %}
