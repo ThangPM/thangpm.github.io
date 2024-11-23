@@ -2,22 +2,25 @@
 ---
 
 @article{pham2024slimlm,
-  title={SlimLM: An Efficient Small Language Model for On-Device Document Assistance},
-  author={Pham, Thang and Nguyen, Phat T and Yoon, Seunghyun and Lai, Viet Dac and Dernoncourt, Franck and Bui, Trung},
-  journal={arXiv preprint},
-  year={2024},
+  title = {SlimLM: An Efficient Small Language Model for On-Device Document Assistance},
+  author = {Pham, Thang and Nguyen, Phat T and Yoon, Seunghyun and Lai, Viet Dac and Dernoncourt, Franck and Bui, Trung},
+  journal = {arXiv preprint arXiv:2411.09944},
+  year = {2024},
   abbr = {arXiv},
-  abstract = "While small language models (SLMs) show promises for mobile deployment, their real-world performance and applications on smartphones remains underexplored. We present SlimLM, a series of SLMs optimized for document assistance tasks on mobile devices. Through extensive experiments on a Samsung Galaxy S24, we identify the optimal trade-offs between model size (ranging from 125M to 7B parameters), context length, and inference time for efficient on-device processing. SlimLM is pre-trained on SlimPajama-627B and fine-tuned on DocAssist, our constructed dataset for summarization, question answering and suggestion tasks. Our smallest model demonstrates efficient performance on S24, while larger variants offer enhanced capabilities within mobile constraints. We evaluate SlimLM against existing SLMs, showing comparable or superior performance and offering a benchmark for future research in on-device language models. We also provide an Android application, offering practical insights into SLM deployment. Our findings provide valuable insights and illuminate the capabilities of running advanced language models on high-end smartphones, potentially reducing server costs and enhancing privacy through on-device processing."
+  arxiv = {2411.09944},
+  abstract = "While small language models (SLMs) show promises for mobile deployment, their real-world performance and applications on smartphones remains underexplored. We present SlimLM, a series of SLMs optimized for document assistance tasks on mobile devices. Through extensive experiments on a Samsung Galaxy S24, we identify the optimal trade-offs between model size (ranging from 125M to 7B parameters), context length, and inference time for efficient on-device processing. SlimLM is pre-trained on SlimPajama-627B and fine-tuned on DocAssist, our constructed dataset for summarization, question answering and suggestion tasks. Our smallest model demonstrates efficient performance on S24, while larger variants offer enhanced capabilities within mobile constraints. We evaluate SlimLM against existing SLMs, showing comparable or superior performance and offering a benchmark for future research in on-device language models. We also provide an Android application, offering practical insights into SLM deployment. Our findings provide valuable insights and illuminate the capabilities of running advanced language models on high-end smartphones, potentially reducing server costs and enhancing privacy through on-device processing.",
+  altmetric = true,
 }
 
 @article{van2024taipan,
-  title={Taipan: Efficient and Expressive State Space Language Models with Selective Attention},
-  author={Van Nguyen, Chien and Nguyen, Huy Huu and Pham, Thang and Zhang, Ruiyi and Deilamsalehy, Hanieh and Mathur, Puneet and Rossi, Ryan A and Bui, Trung and Lai, Viet Dac and Dernoncourt, Franck and others},
-  journal={arXiv preprint arXiv:2410.18572},
-  year={2024},
+  title = {Taipan: Efficient and Expressive State Space Language Models with Selective Attention},
+  author = {Van Nguyen, Chien and Nguyen, Huy Huu and Pham, Thang and Zhang, Ruiyi and Deilamsalehy, Hanieh and Mathur, Puneet and Rossi, Ryan A and Bui, Trung and Lai, Viet Dac and Dernoncourt, Franck and others},
+  journal = {arXiv preprint arXiv:2410.18572},
+  year = {2024},
   abbr = {arXiv},
   arxiv = {2410.18572},
-  abstract = "Efficient long-context language modeling remains a significant challenge in Natural Language Processing (NLP). While Transformers dominate language tasks, they struggle with long sequences due to quadratic computational complexity in training and linearly scaling memory costs during inference. Recent State Space Models (SSMs) such as Mamba offer alternatives with constant memory usage, but they underperform in tasks requiring extensive in-context retrieval. We introduce Taipan, a novel hybrid architecture that combines Mamba-2 with Selective Attention Layers (SALs). These SALs identify tokens requiring long-range interactions, remove less important features, and then augment their representations using the attention module. This approach balances Mamba's efficiency with Transformer-like performance in memory-intensive tasks. By constraining the attention budget, Taipan extends accurate predictions to context lengths of up to 1 million tokens while preserving computational efficiency. Our experiments demonstrate Taipan's superior performance across various scales and tasks, offering a promising solution for efficient long-context language modeling."
+  abstract = "Efficient long-context language modeling remains a significant challenge in Natural Language Processing (NLP). While Transformers dominate language tasks, they struggle with long sequences due to quadratic computational complexity in training and linearly scaling memory costs during inference. Recent State Space Models (SSMs) such as Mamba offer alternatives with constant memory usage, but they underperform in tasks requiring extensive in-context retrieval. We introduce Taipan, a novel hybrid architecture that combines Mamba-2 with Selective Attention Layers (SALs). These SALs identify tokens requiring long-range interactions, remove less important features, and then augment their representations using the attention module. This approach balances Mamba's efficiency with Transformer-like performance in memory-intensive tasks. By constraining the attention budget, Taipan extends accurate predictions to context lengths of up to 1 million tokens while preserving computational efficiency. Our experiments demonstrate Taipan's superior performance across various scales and tasks, offering a promising solution for efficient long-context language modeling.",
+  altmetric = false,
 }
 
 @inproceedings{pham-etal-2024-peeb,
@@ -45,6 +48,8 @@
     slides = {https://app.underline.io/downloadable_materials/lectures/97581/slideshow},
     video = {https://underline.io/lecture/97581-peeb-part-based-image-classifiers-with-an-explainable-and-editable-language-bottleneck},
     demo = {https://huggingface.co/spaces/XAI/PEEB},
+    arxiv = {2403.05297},
+    altmetric = false,
 }
 
 @inproceedings{pham-etal-2023-pic,
@@ -68,6 +73,8 @@
     code = {https://github.com/Phrase-in-Context},
     video = {https://aclanthology.org/2023.eacl-main.1.mp4},
     website = {https://phrase-in-context.github.io/},
+    arxiv = {2207.09068},
+    altmetric = false,
 }
 
 @article{pham2023semi,
@@ -78,6 +85,7 @@
   abbr = {arXiv},
   arxiv = {2304.00557},
   abstract = "The advent of deep learning has led to a significant gain in machine translation. However, most of the studies required a large parallel dataset which is scarce and expensive to construct and even unavailable for some languages. This paper presents a simple yet effective method to tackle this problem for low-resource languages by augmenting high-quality sentence pairs and training NMT models in a semi-supervised manner. Specifically, our approach combines the cross-entropy loss for supervised learning with KL Divergence for unsupervised fashion given pseudo and augmented target sentences derived from the model. We also introduce a SentenceBERT-based filter to enhance the quality of augmenting data by retaining semantically similar sentence pairs. Experimental results show that our approach significantly improves NMT baselines, especially on low-resource datasets with 0.46--2.03 BLEU scores. We also demonstrate that using unsupervised training for augmented data is more efficient than reusing the ground-truth target sentences for supervised learning.",
+  altmetric = false,
 }
 
 @inproceedings{pham-etal-2022-double,
@@ -104,6 +112,8 @@
     code = {https://github.com/anguyen8/im},
     slides = {https://auburn.edu/~tmp0038/AACL2022_Double_Trouble_Slides.pdf},
     video = {https://youtu.be/lpOWV9mXFGo},
+    arxiv = {2110.11929},
+    altmetric = false,
 }
 
 @inproceedings{pham-etal-2021-order,
@@ -129,6 +139,8 @@
     code = {https://github.com/anguyen8/out-of-order},
     slides = {https://auburn.edu/~tmp0038/ACL2021_Out_of_Order_Slides.pdf},
     video = {https://aclanthology.org/2021.findings-acl.98.mp4},
+    arxiv = {2012.15180},
+    altmetric = true, 
 }
 
 @inproceedings{sohrab-etal-2019-neural,

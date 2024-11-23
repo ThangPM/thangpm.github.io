@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-01-21
+date: 2023-04-13
 inline: true
 related_posts: false
 ---
 
-🎖️ Our work PiC on [phrase understanding and semantic search](https://aclanthology.org/2023.eacl-main.1.pdf) has been accepted to EACL 2023!
+🏆 Received [Graduate Student Council Travel Fellowship](https://education.auburn.edu/about/graduate-students/travel-awards.php) from Auburn University.

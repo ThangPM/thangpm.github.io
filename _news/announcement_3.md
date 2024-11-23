@@ -1,8 +1,9 @@
 ---
 layout: post
-date: 2024-03-13
+date: 2021-05-17
 inline: true
 related_posts: false
 ---
 
-🎖️ Our work PEEB on [part-based explainable and editable image classification](https://aclanthology.org/2024.findings-naacl.131.pdf) has been accepted to Findings of NAACL 2024!
+🎯 Joined [Adobe Research](https://research.adobe.com/) for my first internship on phrase similarity and semantic search.
+
