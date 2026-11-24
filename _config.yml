@@ -62,7 +62,7 @@ max_width: 1080px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: https://thangpm.github.io/assets/img/thang_avatar_otw.jpg
+og_image: https://thangpm.github.io/assets/img/thang_avatar_portrait.jpg
 
 # -----------------------------------------------------------------------------
 # Social integration

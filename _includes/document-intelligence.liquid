@@ -7,8 +7,8 @@
 >
   <div class="scene-heading">
     <div>
-      <p class="section-label">Retrieval, agents &amp; evaluation</p>
-      <h2 id="scene-heading">From sources to grounded answers</h2>
+      <p class="section-label">Models, tools &amp; evaluation</p>
+      <h2 id="scene-heading">From tasks to useful results</h2>
     </div>
   </div>
   <div class="scene-body">
@@ -16,10 +16,10 @@
       class="scene-viewport"
       tabindex="0"
       role="region"
-      aria-label="Conceptual document intelligence diagram; scroll horizontally on small screens"
+      aria-label="Illustrative AI task workflow; scroll horizontally on small screens"
     >
       <div class="scene-canvas">
-        <svg class="scene-illustration workbench-illustration" viewBox="0 -100 1000 610" aria-hidden="true" focusable="false">
+        <svg class="scene-illustration workbench-illustration" viewBox="0 0 1000 335" aria-hidden="true" focusable="false">
           <defs>
             <radialGradient id="scene-halo">
               <stop offset="0" stop-color="currentColor" stop-opacity=".2"/>
@@ -53,118 +53,96 @@
               <path d="M-5-6H-8V6H-5M5-6H8V6H5M0-5V5"/>
             </g>
           </defs>
-          <ellipse cx="500" cy="250" rx="480" ry="230" fill="url(#scene-halo)"/>
+          <ellipse cx="500" cy="165" rx="480" ry="155" fill="url(#scene-halo)"/>
           <g class="scene-wires">
-            <path d="M390 83V112"/>
-            <path d="M655 83V112"/>
-            <path class="scene-source-results" d="M230 174H285"/>
-            <path class="scene-query-wire" d="M285 190H230"/>
-            <path d="M390 200V258"/>
-            <path d="M495 302H525V156H550"/>
-            <path d="M655 200V258"/>
-            <path d="M760 302H777V251H795"/>
-            <path class="scene-citation-flow" d="M495 302H550"/>
+            <path d="M390 90V110"/>
+            <path d="M655 90V110"/>
+            <path class="scene-source-results" d="M230 139H285"/>
+            <path class="scene-query-wire" d="M285 162H230"/>
+            <path d="M495 148H550"/>
+            <path d="M760 148H795"/>
+            <path class="scene-citation-flow" d="M390 185V210"/>
+            <path d="M655 185V210"/>
+            <path d="M760 230H777V174H795"/>
           </g>
           <g data-scene-stage="agents">
             <g class="scene-wires">
-              <path d="M230-48H285"/>
-              <path d="M760-48H795"/>
-              <path d="M655-15V18"/>
-              <path class="scene-context-return" d="M890-15V0H775V-36H760"/>
+              <path d="M230 54H285"/>
+              <path d="M760 54H795"/>
+              <path class="scene-context-return" d="M890 90V100H775V72H760"/>
             </g>
-            <rect class="scene-node" x="20" y="-80" width="210" height="65" rx="10"/>
-            <text class="scene-label" x="38" y="-48">Task routing</text>
-            <text class="scene-caption" x="38" y="-25">Question + context</text>
-            <rect class="scene-node" x="285" y="-80" width="475" height="65" rx="10"/>
-            <text class="scene-label" x="303" y="-48">Task agents</text>
-            <text class="scene-caption" x="303" y="-25">Coordinated tasks</text>
-            <rect class="scene-agent-task" x="480" y="-67" width="115" height="39" rx="7"/>
-            <rect class="scene-agent-task" x="622" y="-67" width="115" height="39" rx="7"/>
-            <text class="scene-caption" x="508" y="-42">Task A</text>
-            <text class="scene-caption" x="650" y="-42">Task B</text>
-            <rect class="scene-node" x="795" y="-80" width="190" height="65" rx="10"/>
-            <text class="scene-label" x="809" y="-48">Shared context</text>
-            <text class="scene-caption" x="809" y="-25">Findings + state</text>
-            <rect class="scene-node" x="285" y="18" width="475" height="65" rx="10"/>
-            <rect class="scene-card-light" x="285" y="18" width="475" height="65" rx="10"/>
-            <text class="scene-label" x="303" y="46">Harness execution</text>
-            <text class="scene-caption" x="303" y="70">Model + tools + context</text>
-            <g class="scene-symbol">
-              <path d="M615 34H742V67H615Z"/>
-              <text class="scene-caption" x="626" y="56">Model + tools</text>
-            </g>
+            <rect class="scene-node" x="285" y="20" width="475" height="70" rx="10"/>
+            <rect class="scene-card-light" x="285" y="20" width="475" height="70" rx="10"/>
+            <text class="scene-label" x="303" y="46">Task coordination</text>
+            <text class="scene-caption" x="303" y="76">Agents + execution harness</text>
+            <rect class="scene-agent-task" x="538" y="31" width="95" height="35" rx="7"/>
+            <rect class="scene-agent-task" x="648" y="31" width="95" height="35" rx="7"/>
+            <text class="scene-caption" x="560" y="54">Task A</text>
+            <text class="scene-caption" x="670" y="54">Task B</text>
+            <rect class="scene-node" x="795" y="20" width="190" height="70" rx="10"/>
+            <text class="scene-label" x="809" y="46">Working context</text>
+            <text class="scene-caption" x="809" y="76">Task + findings</text>
           </g>
           <g data-scene-stage="sources">
-            <rect class="scene-node" x="20" y="112" width="210" height="234" rx="12"/>
-            <rect class="scene-card-light" x="20" y="112" width="210" height="234" rx="12"/>
-            <g class="scene-symbol" transform="translate(38 123)">
+            <rect class="scene-node" x="20" y="20" width="210" height="230" rx="12"/>
+            <rect class="scene-card-light" x="20" y="20" width="210" height="230" rx="12"/>
+            <g class="scene-symbol" transform="translate(38 26)">
               <path d="M5 3H20L25 8V24H5ZM20 3V9H25M0 8V28H19M10 14H20M10 19H18"/>
             </g>
-            <text class="scene-label" x="77" y="144">Sources</text>
-            <path class="scene-rule" d="M38 159H212"/>
-            <rect class="scene-source-row" x="30" y="168" width="190" height="37" rx="6"/>
-            <rect class="scene-source-row" x="30" y="217" width="190" height="37" rx="6"/>
-            <rect class="scene-source-row" x="30" y="266" width="190" height="37" rx="6"/>
-            <text class="scene-caption" x="38" y="192">Documents</text>
-            <text class="scene-caption" x="38" y="241">External collections</text>
-            <text class="scene-caption" x="38" y="290">Via connectors</text>
+            <text class="scene-label" x="77" y="47">Inputs</text>
+            <rect class="scene-source-row" x="30" y="66" width="190" height="37" rx="6"/>
+            <rect class="scene-source-row" x="30" y="128" width="190" height="37" rx="6"/>
+            <rect class="scene-source-row" x="30" y="190" width="190" height="37" rx="6"/>
+            <text class="scene-caption" x="38" y="90">Requests &amp; goals</text>
+            <text class="scene-caption" x="38" y="152">Data &amp; documents</text>
+            <text class="scene-caption" x="38" y="214">Tools &amp; services</text>
           </g>
           <g data-scene-stage="retrieve">
-            <rect class="scene-node" x="285" y="112" width="210" height="88" rx="10"/>
-            <rect class="scene-card-light" x="285" y="112" width="210" height="88" rx="10"/>
-            <g class="scene-symbol" transform="translate(303 124)">
+            <rect class="scene-node" x="285" y="110" width="210" height="75" rx="10"/>
+            <rect class="scene-card-light" x="285" y="110" width="210" height="75" rx="10"/>
+            <g class="scene-symbol" transform="translate(303 121)">
               <circle cx="11" cy="10" r="9"/>
               <path d="M18 17L27 26"/>
             </g>
-            <text class="scene-label" x="343" y="144">Retrieval</text>
-            <text class="scene-caption" x="303" y="178">Embeddings + rank</text>
-            <rect class="scene-node" x="285" y="258" width="210" height="88" rx="10"/>
-            <rect class="scene-card-light" x="285" y="258" width="210" height="88" rx="10"/>
-            <g class="scene-symbol" transform="translate(303 270)">
-              <path d="M0 3H24V22H0ZM5 8H19M5 13H16M5 18H11"/>
-            </g>
-            <text class="scene-label" x="343" y="290">Evidence</text>
-            <text class="scene-caption" x="303" y="324">Passages + sources</text>
+            <text class="scene-label" x="343" y="142">Retrieval</text>
+            <text class="scene-caption" x="303" y="169">Optional knowledge</text>
           </g>
           <g data-scene-stage="synthesize">
-            <rect class="scene-node" x="550" y="112" width="210" height="88" rx="10"/>
-            <rect class="scene-card-light" x="550" y="112" width="210" height="88" rx="10"/>
-            <g class="scene-symbol" transform="translate(568 124)">
+            <rect class="scene-node" x="550" y="110" width="210" height="75" rx="10"/>
+            <rect class="scene-card-light" x="550" y="110" width="210" height="75" rx="10"/>
+            <g class="scene-symbol" transform="translate(568 121)">
               <path d="M0 2L12 12L0 24M12 12H27M21 6L27 12L21 18"/>
             </g>
-            <text class="scene-label" x="608" y="144">Synthesis</text>
-            <text class="scene-caption" x="568" y="178">Combine + qualify</text>
+            <text class="scene-label" x="608" y="142">Tool use</text>
+            <text class="scene-caption" x="568" y="169">Reason + execute</text>
           </g>
           <g data-scene-stage="attribute">
-            <rect class="scene-node" x="550" y="258" width="210" height="88" rx="10"/>
-            <rect class="scene-card-light" x="550" y="258" width="210" height="88" rx="10"/>
-            <g class="scene-symbol" transform="translate(568 270)">
-              <path d="M11 16L7 20A6 6 0 0 1 0 12L7 5A6 6 0 0 1 15 5M12 9L16 5A6 6 0 0 1 24 13L17 20A6 6 0 0 1 9 20M7 16L17 6"/>
-            </g>
-            <text class="scene-label" x="608" y="290">Attribution</text>
-            <text class="scene-caption" x="568" y="324">Claims &#8596; passages</text>
+            <rect class="scene-node" x="285" y="210" width="475" height="40" rx="10"/>
+            <rect class="scene-card-light" x="285" y="210" width="475" height="40" rx="10"/>
+            <text class="scene-label" x="303" y="237">Provenance</text>
+            <text class="scene-caption" x="438" y="237">Source links when relevant</text>
           </g>
           <g>
-            <rect class="scene-tool" x="795" y="198" width="190" height="108" rx="12"/>
-            <rect class="scene-answer-light" x="795" y="198" width="190" height="108" rx="12"/>
-            <text class="scene-label" x="812" y="230">Grounded</text>
-            <text class="scene-label" x="812" y="258">answer</text>
-            <text class="scene-caption" x="812" y="288">Source citations</text>
-            <g class="scene-symbol scene-answer-symbol" transform="translate(947 216)">
+            <rect class="scene-tool" x="795" y="110" width="190" height="105" rx="12"/>
+            <rect class="scene-answer-light" x="795" y="110" width="190" height="105" rx="12"/>
+            <text class="scene-label" x="812" y="140">Results</text>
+            <text class="scene-caption" x="812" y="168">Answers &amp; analyses</text>
+            <text class="scene-caption" x="812" y="193">Summaries &amp; actions</text>
+            <g class="scene-symbol scene-answer-symbol" transform="translate(947 122)">
               <path d="M0 0H22V23H0ZM5 6H17M5 11H17M5 16H12"/>
             </g>
-            <path class="scene-answer-check" pathLength="1" d="M947 257L954 264L969 248"/>
+            <path class="scene-answer-check" pathLength="1" d="M957 202L964 209L979 193"/>
           </g>
           <g data-scene-stage="evaluate">
-            <path class="scene-evaluation-wire" d="M760 51H992V445H985M390 346V400M890 306V400"/>
-            <rect class="scene-node" x="20" y="400" width="965" height="90" rx="12"/>
-            <rect class="scene-card-light" x="20" y="400" width="965" height="90" rx="12"/>
-            <path class="scene-rule" d="M246 449V475M473 449V475M731 449V475"/>
-            <text class="scene-label" x="38" y="432">Evaluation</text>
-            <text class="scene-caption" x="38" y="466">Answers</text>
-            <text class="scene-caption" x="265" y="466">Retrieval</text>
-            <text class="scene-caption" x="492" y="466">Tool usage</text>
-            <text class="scene-caption" x="750" y="466">Agent traces</text>
+            <path class="scene-evaluation-wire" d="M760 80H770V95H992V295H985M390 250V270M890 215V270"/>
+            <rect class="scene-node" x="20" y="270" width="965" height="50" rx="12"/>
+            <rect class="scene-card-light" x="20" y="270" width="965" height="50" rx="12"/>
+            <path class="scene-rule" d="M246 296V313M473 296V313M731 296V313"/>
+            <text class="scene-label" x="38" y="289">Evaluation</text>
+            <text class="scene-caption" x="38" y="308">Task success</text>
+            <text class="scene-caption" x="265" y="308">Tool results</text>
+            <text class="scene-caption" x="492" y="308">Quality &amp; latency</text>
+            <text class="scene-caption" x="750" y="308">Execution traces</text>
           </g>
           <g class="scene-tokens">
             <g class="scene-token scene-token-document" data-scene-path="sources"><use href="#scene-document-token"/></g>
@@ -177,7 +155,7 @@
             <g class="scene-token scene-token-trace" data-scene-path="evaluate"><use href="#scene-chunk-token"/></g>
           </g>
         </svg>
-        <div class="scene-node-controls" data-scene-controls role="group" aria-label="Explore document intelligence stages" hidden>
+        <div class="scene-node-controls" data-scene-controls role="group" aria-label="Explore AI task workflow stages" hidden>
           <button
             class="scene-hit scene-hit-sources"
             type="button"
@@ -185,7 +163,7 @@
             aria-pressed="true"
             aria-controls="scene-description"
           >
-            <span class="sr-only">Explore sources and connectors</span>
+            <span class="sr-only">Explore task inputs and resources</span>
           </button>
           <button
             class="scene-hit scene-hit-retrieve"
@@ -194,7 +172,7 @@
             aria-pressed="false"
             aria-controls="scene-description"
           >
-            <span class="sr-only">Explore retrieval and evidence</span>
+            <span class="sr-only">Explore optional knowledge retrieval</span>
           </button>
           <button class="scene-hit scene-hit-agents" type="button" data-scene-select="agents" aria-pressed="false" aria-controls="scene-description">
             <span class="sr-only">Explore agents and harness support</span>
@@ -206,7 +184,7 @@
             aria-pressed="false"
             aria-controls="scene-description"
           >
-            <span class="sr-only">Explore answer synthesis</span>
+            <span class="sr-only">Explore tools and reasoning</span>
           </button>
           <button
             class="scene-hit scene-hit-attribute"
@@ -215,7 +193,7 @@
             aria-pressed="false"
             aria-controls="scene-description"
           >
-            <span class="sr-only">Explore source attribution</span>
+            <span class="sr-only">Explore provenance and source attribution</span>
           </button>
           <button
             class="scene-hit scene-hit-evaluate"
@@ -224,37 +202,37 @@
             aria-pressed="false"
             aria-controls="scene-description"
           >
-            <span class="sr-only">Explore answer, retrieval, tool and trace evaluation</span>
+            <span class="sr-only">Explore task success, quality, tools and execution traces</span>
           </button>
         </div>
       </div>
     </div>
     <div class="scene-inspector">
-      <p class="scene-connection-key">Solid arrows: task flow and evidence. Dashed arrows: queries, shared context, and evaluation observations.</p>
+      <p class="scene-connection-key">Solid: task flow. Dashed: queries, context, and evaluation observations.</p>
       <div class="scene-description" id="scene-description" data-scene-description-panel aria-live="off" aria-atomic="true">
         <section data-scene-description="sources" aria-labelledby="scene-sources-title">
-          <h3 id="scene-sources-title">Give knowledge a source.</h3>
-          <p>Bring documents, external collections, and connected content into a source-aware evidence foundation.</p>
+          <h3 id="scene-sources-title">Start with the task.</h3>
+          <p>Define the goal and available inputs: requests, data, documents, tools, and services.</p>
         </section>
         <section data-scene-description="retrieve" aria-labelledby="scene-retrieve-title">
-          <h3 id="scene-retrieve-title">Build the evidence context.</h3>
-          <p>Retrieve accessible passages, select what fits the context budget, and preserve source references.</p>
+          <h3 id="scene-retrieve-title">Choose useful context.</h3>
+          <p>Retrieve relevant knowledge when needed; not every task requires search or document evidence.</p>
         </section>
         <section data-scene-description="agents" aria-labelledby="scene-agents-title">
           <h3 id="scene-agents-title">Coordinate the work.</h3>
-          <p>Give task agents relevant context and shared findings, with a harness supporting model execution and tool use.</p>
+          <p>Give task agents relevant context, with a harness supporting model execution and tool use.</p>
         </section>
         <section data-scene-description="synthesize" aria-labelledby="scene-synthesize-title">
-          <h3 id="scene-synthesize-title">Turn evidence into an answer.</h3>
-          <p>Build a coherent response from evidence, qualifying conflicts and missing context.</p>
+          <h3 id="scene-synthesize-title">Reason and use tools.</h3>
+          <p>Combine context and tool results to produce answers, summaries, analyses, or task-appropriate actions.</p>
         </section>
         <section data-scene-description="attribute" aria-labelledby="scene-attribute-title">
-          <h3 id="scene-attribute-title">Make claims inspectable.</h3>
-          <p>Connect answer claims to supporting passages and available source locations.</p>
+          <h3 id="scene-attribute-title">Keep results inspectable.</h3>
+          <p>Preserve relevant source links and tool records; connect factual claims to evidence when applicable.</p>
         </section>
         <section data-scene-description="evaluate" aria-labelledby="scene-evaluate-title">
           <h3 id="scene-evaluate-title">Inspect the whole run.</h3>
-          <p>Inspect answer quality, retrieval, tool failures, and execution traces to understand reliability and responsiveness.</p>
+          <p>Inspect task success, output quality, tool behavior, execution traces, and responsiveness.</p>
         </section>
       </div>
     </div>

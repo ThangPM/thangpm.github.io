@@ -3,11 +3,11 @@ layout: about
 title: about
 permalink: /
 subtitle: Senior Machine Learning Engineer, Adobe DCAI
-headline: Research rigor.<br>Production impact.
+headline: Research rigor. Production impact.
 intro: >-
-  My work spans large and small language models, document intelligence, and agent systems. I connect retrieval, tools, and evidence-backed answers with evaluation that balances quality and responsiveness.
+  My work spans large and small language models, document intelligence, and agent systems. I build and evaluate workflows for retrieval, tool use, and reliable results.
 profile:
-  image: thang_avatar_otw.jpg
+  image: thang_avatar_portrait.jpg
   image_alt: Thang M. Pham
 approach:
   - title: Follow the problem, not the boundary
