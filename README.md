@@ -37,7 +37,7 @@ After deployment:
 
 ## Validation and deployment
 
-Use Ruby 3.3 (CI's runtime family), Bundler from `Gemfile.lock`, and Node for the existing Prettier checks:
+Use Ruby 3.3 (CI follows its latest patch release to support updated Ubuntu runner images), Bundler from `Gemfile.lock`, and Node for the existing Prettier checks:
 
 ```sh
 bundle install
