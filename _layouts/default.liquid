@@ -17,11 +17,12 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="container mt-5" id="main-content" role="main" tabindex="-1">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
@@ -51,17 +52,6 @@
     {% include footer.liquid %}
 
     <!-- JavaScripts -->
-    {% comment %} <div style="transform: scale(0.1); transform-origin: center top; margin: 0 auto; text-align: center;">
-      <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=3aT7L8MRSBqX6BjgaBUMdiek1nKaXERkMjVefz5yoao"></script>
-    </div> {% endcomment %}
-    <div style="height: 200px; overflow: hidden; margin-bottom: 25px;">  <!-- Adjust this height value as needed -->
-        <div style="transform: scale(0.1); transform-origin: center top; margin: 10px auto 0 auto; text-align: center;">
-            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=3aT7L8MRSBqX6BjgaBUMdiek1nKaXERkMjVefz5yoao"></script>
-        </div>
-    </div>
-
-    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-
     {% include scripts/jquery.liquid %}
     {% include scripts/bootstrap.liquid %}
     {% include scripts/masonry.liquid %}
@@ -74,7 +64,9 @@
     {% include scripts/tikzjax.liquid %}
     {% include scripts/typograms.liquid %}
     {% include scripts/misc.liquid %}
-    {% include scripts/badges.liquid %}
+    {% if page.permalink == '/publications/' %}
+      {% include scripts/badges.liquid %}
+    {% endif %}
     {% include scripts/mathjax.liquid %}
     {% include scripts/pseudocode.liquid %}
     {% include scripts/analytics.liquid %}

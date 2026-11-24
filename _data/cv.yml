@@ -11,76 +11,113 @@
 - title: Research Areas
   type: list
   contents:
-  - "I'm particularly interested in making AI systems more interpretable and efficient, recently developing SlimLM models for on-device document assistance and creating methods to enhance the explainability and robustness of language models in NLP and CV tasks. My current research focuses on developing efficient small language models and model optimization techniques for mobile devices, building robust retrieval-augmented generation (RAG) systems and multi-agent architectures."
+    - "<b>Document intelligence and agent systems:</b> Retrieval-augmented generation, context selection, harness-supported tool use, grounding, and attribution."
+    - "<b>Large and small language models:</b> Efficient on-device inference, model optimization, and document assistance."
+    - "<b>Evaluation and reliability:</b> Controlled comparisons of answer quality, responsiveness, resource use, and failure modes."
 
 - title: Education
   type: time_table
   contents:
-   - title: Ph.D. in Computer Science (ML/AI)
-     institution: Auburn University, AL, USA
-     year: 2019 - 2024
-     description:
-       - 'Advised by <a href="https://anhnguyen.me" target="_blank"><b>Prof. Anh Nguyen</b></a>'
-       - 'GPA: 3.91/4.0'
-       - 'Thesis: <i>Improving Interpretability and Accuracy of Artificial Intelligence in Natural Language and Image Understanding</i>'
-   - title: B.S. (Honours) in Computer Science and Engineering
-     institution: University of Science (HCMUS), Ho Chi Minh City, Vietnam
-     year: 2009 - 2013
-     description:
-       - 'Advised by <a href="https://www.fit.hcmus.edu.vn/~ttson/" target="_blank"><b>Dr. Son Tran</b></a>'
-       - 'GPA: 3.39/4.0'
-       - 'Thesis: <i>Scene Text Detection and Recognition (Distinction)</i>'
+    - title: Ph.D. in Computer Science (ML/AI)
+      institution: Auburn University, AL, USA
+      year: 2019 - 2024
+      description:
+        - 'Advised by <a href="https://anhnguyen.me" target="_blank"><b>Prof. Anh Nguyen</b></a>'
+        - "GPA: 3.91/4.0"
+        - "Thesis: <i>Improving Interpretability and Accuracy of Artificial Intelligence in Natural Language and Image Understanding</i>"
+    - title: B.S. (Honours) in Computer Science and Engineering
+      institution: University of Science (HCMUS), Ho Chi Minh City, Vietnam
+      year: 2009 - 2013
+      description:
+        - 'Advised by <a href="https://www.fit.hcmus.edu.vn/~ttson/" target="_blank"><b>Dr. Son Tran</b></a>'
+        - "GPA: 3.39/4.0"
+        - "Thesis: <i>Scene Text Detection and Recognition (Distinction)</i>"
 
 - title: Work Experience
   type: time_table
   contents:
-   - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Reseach</a>
-     year: 06/2024 - now
-     description:
-       - Quantizes and deploys LLMs (∼0.1–7 billion parameters) locally on mobile devices for benchmarking. 
-       - Proposes SlimLM models (∼0.05–3 billion parameters), pre-trained from scratch on ∼1–5 trillion tokens using datasets such as SlimPajama, FineWeb, DCLM or SmolLM. 
-       - Finetunes and evaluates SlimLM and baseline models for Q/A, question suggestion and summarization for documents.
-       - Develops a mobile application for PDF reader with AI assistant to demonstrate the efficiency of SlimLM on documents.
+    - title: Senior Machine Learning Engineer at <a href="https://www.adobe.com/" target="_blank">Adobe</a>
+      department: Document Cloud Artificial Intelligence (DCAI)
+      year: 03/2025 - present
+      description:
+        - Work on retrieval, context selection, and harness-supported tool use for document intelligence and agent systems.
+        - Evaluate evidence-backed answers through controlled comparisons of quality, responsiveness, and resource use.
+        - Trace failures across the system, carrying issues through diagnosis, implementation, and verification.
+        - Build for shared ownership through self-service workflows, knowledge sharing, and correctness-focused code review.
 
-   - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Reseach</a>
-     year: 09/2023 - 01/2024
-     description:
-       - Crawled and analyzed trends in Reddit's image editing requests. 
-       - Constructed an instruction-following dataset and a human preference data to teach large language models (LLMs) to use visual foundation models for handling image editing requests.
-       - Fine-tuned open-source LLMs (e.g., LLaMA-2, Mistral, Zephyr, Falcon, MPT) across different versions (7B, 13B, 70B) to correctly generate and execute a plan including a sequence of image editing tools to handle simple, complex and implicit user requests for Adobe products (e.g., Photoshop).
+    - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Research</a>
+      year: 2024
+      description:
+        - Researched efficient small language models for on-device document assistance, published as <a href="https://aclanthology.org/2025.acl-demo.42/">SlimLM at ACL 2025 (System Demonstrations)</a>.
+        - Evaluated trade-offs among model size, context length, and on-device inference time.
+        - Studied document summarization, question answering, and question suggestion on mobile devices.
+        - Developed an Android demonstration for on-device document assistance.
 
-   - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Reseach</a>
-     year: 05/2021 - 11/2021
-     description:
-       - Developed a deep neural model for phrase representation. 
-       - Designed a human annotation guideline and led the team (∼15 people) to construct a dataset and benchmark to enhance and evaluate in-context phrase representation for semantic search. 
-       - Fine-tuned and evaluate small and large language models in understanding phrases in context. 
-       - Developed a smart phrase search system that is potentially utilized in the Acrobat product.
+    - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Research</a>
+      year: 09/2023 - 01/2024
+      description:
+        - Researched language-model planning and tool use for image-editing tasks.
+        - Constructed instruction-following and preference data for evaluating model behavior.
+        - Fine-tuned and evaluated language models for generating and executing tool-use plans.
 
-   - title: ML/AI Research Engineer at <a href="https://www.aist.go.jp/index_en.html" target="_blank">AIST Japan</a>
-     year: 05/2017 - 08/2019
-     description:
-       - Investigated state-of-the-art deep learning models for named entity recognition (NER), relation and event extraction in biomedical domain. 
-       - Implemented novel deep neural networks for NER task with <a href="https://www.linkedin.com/in/mohammad-golam-sohrab-ph-d-04566668?originalSubdomain=jp" target="_blank">Dr. Sohrab</a> (EMNLP 2018) and <a href="https://www.linkedin.com/in/meizhi-ju-53b13b108/?originalSubdomain=uk" target="_blank">Dr. Ju</a> (NAACL 2018). 
-       - Developed the DeepEventMine system with <a href="https://www.linkedin.com/in/long-trieu/?originalSubdomain=vn" target="_blank">Dr. Trieu</a> in the first phase of the project. 
-       - Fine-tuned hyper-parameters with greedy search and Bayesian optimization methods. 
-       - Pre-processed biomedical corpora (JNLPBA2004, GENIA, ACE2005, CG2013, MLEE, PHAEDRA). 
-       - Optimized parallel computing with multiple GPUs for speeding up a model training process. 
-       - Collaborated with <a href="https://cbrc3.cbrc.pj.aist.go.jp/~nagano/" target="_blank">Dr. Nagano</a> to create the EzCat database. 
-       - Developed pipelines to evaluate <a href="https://www.nactem.ac.uk/EventMine/" target="_blank">EventMine systems</a> for <a href="https://www.nactem.ac.uk/index.php" target="_blank">NaCTeM (University of Manchester)</a>.
+    - title: Research Scientist Intern at <a href="https://research.adobe.com/" target="_blank">Adobe Research</a>
+      year: 05/2021 - 11/2021
+      description:
+        - Researched contextual phrase representations and semantic search.
+        - Developed dataset and benchmark methods for phrase understanding, published as <a href="https://aclanthology.org/2023.eacl-main.1/">PiC at EACL 2023</a>.
+        - Fine-tuned and evaluated language models on phrase understanding in context.
 
-   - title: Senior Software Engineer at OPSWAT Vietnam (now <a href="https://beowulfchain.com/" target="_blank">Beowulf</a>)
-     year: 01/2014 - 05/2017
-     description:
-       - Developed <a href="https://beowulfchain.com/" target="_blank">over-the-top mobile applications</a> (<a href="https://www.edn.com/voxypad-app-provides-collaborative-telecommunication-across-devices/" target="_blank">VoxyPAD</a>, <a href="https://www.facebook.com/tutoricaVN/" target="_blank">Tutorica</a>, <a href="https://apps.apple.com/us/app/victoria-platform/id1216613687" target="_blank">Victoria</a> and <a href="https://hana.beowulfchain.com/" target="_blank">Hana</a>). 
-       - Worked directly with <a href="https://www.linkedin.com/in/williamhnguyen/" target="_blank">CEO Dr. William Nguyen</a> and other team leaders to design APIs for the whole systems. 
-       - Supported clients in the United States and in Japan (Toshiba corporation) to deploy our products.
+    - title: ML/AI Research Engineer at <a href="https://www.aist.go.jp/index_en.html" target="_blank">AIST Japan</a>
+      year: 05/2017 - 08/2019
+      description:
+        - Investigated state-of-the-art deep learning models for named entity recognition (NER), relation and event extraction in biomedical domain.
+        - Implemented novel deep neural networks for NER task with <a href="https://www.linkedin.com/in/mohammad-golam-sohrab-ph-d-04566668?originalSubdomain=jp" target="_blank">Dr. Sohrab</a> (EMNLP 2018) and <a href="https://www.linkedin.com/in/meizhi-ju-53b13b108/?originalSubdomain=uk" target="_blank">Dr. Ju</a> (NAACL 2018).
+        - Developed the DeepEventMine system with <a href="https://www.linkedin.com/in/long-trieu/?originalSubdomain=vn" target="_blank">Dr. Trieu</a> in the first phase of the project.
+        - Fine-tuned hyper-parameters with greedy search and Bayesian optimization methods.
+        - Pre-processed biomedical corpora (JNLPBA2004, GENIA, ACE2005, CG2013, MLEE, PHAEDRA).
+        - Optimized parallel computing with multiple GPUs for speeding up a model training process.
+        - Collaborated with <a href="https://cbrc3.cbrc.pj.aist.go.jp/~nagano/" target="_blank">Dr. Nagano</a> to create the EzCat database.
+        - Developed pipelines to evaluate <a href="https://www.nactem.ac.uk/EventMine/" target="_blank">EventMine systems</a> for <a href="https://www.nactem.ac.uk/index.php" target="_blank">NaCTeM (University of Manchester)</a>.
 
-   - title: Software Engineer at VoxyPAD Vietnam (now <a href="https://beowulfchain.com/" target="_blank">Beowulf</a>)
-     year: 08/2013 - 12/2013
-     description:
-        - Developed a back-end system using Spring framework to provide user account management for virtual RADIUS servers. 
+    - title: Senior Software Engineer at OPSWAT Vietnam (now <a href="https://beowulfchain.com/" target="_blank">Beowulf</a>)
+      year: 01/2014 - 05/2017
+      description:
+        - Developed <a href="https://beowulfchain.com/" target="_blank">over-the-top mobile applications</a> (<a href="https://www.edn.com/voxypad-app-provides-collaborative-telecommunication-across-devices/" target="_blank">VoxyPAD</a>, <a href="https://www.facebook.com/tutoricaVN/" target="_blank">Tutorica</a>, <a href="https://apps.apple.com/us/app/victoria-platform/id1216613687" target="_blank">Victoria</a> and <a href="https://hana.beowulfchain.com/" target="_blank">Hana</a>).
+        - Worked directly with <a href="https://www.linkedin.com/in/williamhnguyen/" target="_blank">CEO Dr. William Nguyen</a> and other team leaders to design APIs for the whole systems.
+        - Supported clients in the United States and in Japan (Toshiba corporation) to deploy our products.
+
+    - title: Software Engineer at VoxyPAD Vietnam (now <a href="https://beowulfchain.com/" target="_blank">Beowulf</a>)
+      year: 08/2013 - 12/2013
+      description:
+        - Developed a back-end system using Spring framework to provide user account management for virtual RADIUS servers.
         - Developed a socket server for an over-the-top application to send and receive messages via socket.
+
+- title: Selected Publications
+  type: time_table
+  contents:
+    - title: '<a href="https://aclanthology.org/2025.acl-demo.42/">SlimLM: An Efficient Small Language Model for On-Device Document Assistance</a>'
+      institution: ACL 2025, System Demonstrations
+      year: 2025
+      description:
+        - First-author research on efficient small language models for on-device document assistance.
+    - title: '<a href="https://aclanthology.org/2024.findings-naacl.131/">PEEB: Part-based Image Classifiers with an Explainable and Editable Language Bottleneck</a>'
+      institution: Findings of NAACL 2024
+      year: 2024
+      description:
+        - Explainable and editable image classification with a language bottleneck.
+    - title: '<a href="https://aclanthology.org/2023.eacl-main.1/">PiC: A Phrase-in-Context Dataset for Phrase Understanding and Semantic Search</a>'
+      institution: EACL 2023
+      year: 2023
+      description:
+        - Phrase understanding and semantic search in context.
+    - title: '<a href="https://aclanthology.org/2021.findings-acl.98/">Out of Order: How important is the sequential order of words in a sentence in Natural Language Understanding tasks?</a>'
+      institution: Findings of ACL-IJCNLP 2021
+      year: 2021
+      description:
+        - Investigated word-order sensitivity and evaluation shortcuts in language understanding models.
+
+- title: Patent Applications
+  type: patents
 
 # - title: Open Source Projects
 #   type: time_table
@@ -89,25 +126,25 @@
 #      year: 2024
 #      description: Part-based Bird Classifiers With Explainable Language Bottleneck
 #    - title: <a href="https://github.com/pmthangk09/slimlm">SlimLM</a>
-#      year: 2024  
+#      year: 2024
 #      description: Efficient Small Language Models for On-Device Document Assistance
 
 - title: Honors and Awards
   type: time_table
   contents:
-   - year: 2023
-     items: 
-       - Diversity and Inclusion Award, EACL 2023.
-       - Graduate Student Council Travel Fellowship.
-   - year: 2019 - 2024
-     items:
-       - Auburn University Graduate Assistantship.
-   - year: 2009 - 2013  
-     items:
-       - University of Science Faculty of IT Excellence Fellowship.
-   - year: 2009
-     items:
-       - Top-3 university entrance award from high school.
+    - year: 2023
+      items:
+        - Diversity and Inclusion Award, EACL 2023.
+        - Graduate Student Council Travel Fellowship.
+    - year: 2019 - 2024
+      items:
+        - Auburn University Graduate Assistantship.
+    - year: 2009 - 2013
+      items:
+        - University of Science Faculty of IT Excellence Fellowship.
+    - year: 2009
+      items:
+        - Top-3 university entrance award from high school.
 
 # - title: Academic Interests
 #   type: nested_list
@@ -126,29 +163,31 @@
 - title: Professional and Volunteering Services
   type: time_table
   contents:
-   - year: 2024
-     items:
-       - 'I am a reviewer for the following conferences: NeurIPS, ACL, EMNLP, NAACL.'
-   - year: 2023
-     items:
-       - 'I was a reviewer for the following conferences: NeurIPS, ICLR, ACL, EMNLP, EACL.'
-   - year: 08/2022 - 05/2023
-     items:
-       - 'I was a youth program personnel for <a href="https://anhnguyen.me/k6-ai-club/" target="_blank">K-6 AI Club</a>.'
-   - year: 2022
-     items:
-       - 'I was a reviewer for the following conferences: NeurIPS, EMNLP.'
+    - year: 2024
+      items:
+        - "Reviewed submissions for NeurIPS, ACL, EMNLP, and NAACL."
+    - year: 2023
+      items:
+        - "I was a reviewer for the following conferences: NeurIPS, ICLR, ACL, EMNLP, EACL."
+    - year: 08/2022 - 05/2023
+      items:
+        - 'I was a youth program personnel for <a href="https://anhnguyen.me/k6-ai-club/" target="_blank">K-6 AI Club</a>.'
+    - year: 2022
+      items:
+        - "I was a reviewer for the following conferences: NeurIPS, EMNLP."
 
 - title: Technical Skills
   type: list
   contents:
-   - <b>Programming Languages:</b> Python, Java, C++, C#, PHP, Javascript.
-   - <b>Deep Learning Frameworks:</b> PyTorch, TensorFlow, Chainer.
-   - <b>NLP Tools:</b> NLTK, SciPy, spaCy, Pandas, Brat Annotation, Argo, EventMine.
-   - <b>Databases:</b> MySQL, PostgreSQL, MongoDB.
+    - "<b>AI Systems:</b> Retrieval-augmented generation, agent systems, harness-supported tool use, context selection, grounding, and attribution."
+    - "<b>Evaluation:</b> Answer quality, retrieval relevance, tool failures, execution traces, responsiveness, and resource trade-offs."
+    - <b>Programming Languages:</b> Python, Java, C++, C#, PHP, Javascript.
+    - <b>Deep Learning Frameworks:</b> PyTorch, TensorFlow, Chainer.
+    - <b>NLP Tools:</b> NLTK, SciPy, spaCy, Pandas, Brat Annotation, Argo, EventMine.
+    - <b>Databases:</b> MySQL, PostgreSQL, MongoDB.
 
 - title: Other Interests
   type: list
   contents:
-   - <b>Sports:</b> Soccer, Tennis, Badminton, Swimming.
-   - <b>Hobbies:</b> Traveling and Gaming.
+    - <b>Sports:</b> Soccer, Tennis, Badminton, Swimming.
+    - <b>Hobbies:</b> Traveling and Gaming.

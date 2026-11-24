@@ -29,4 +29,4 @@ related_posts: false
 }
 </style>
 
-<span class="blink">[new]</span> 🎉 Excited to share that SlimLM on document assistance for mobile devices has been featured in [VentureBeat: "Goodbye cloud, Hello phone: Adobe’s SlimLM brings AI to mobile devices"](https://venturebeat.com/ai/adobe-slimlm-the-ai-that-puts-cloud-scale-power-in-your-pocket/#:~:text=Adobe%27s%20SlimLM%2C%20a%20breakthrough%20AI%20system%2C%20brings%20advanced,offering%20enhanced%20privacy%20and%20reduced%20costs%20for%20businesses.) and [Gadgets360](https://www.gadgets360.com/ai/news/adobe-slimlm-ai-offline-document-processing-on-device-without-internet-connectivity-developed-7080121)!
+🎉 Excited to share that SlimLM on document assistance for mobile devices has been featured in [VentureBeat: "Goodbye cloud, Hello phone: Adobe’s SlimLM brings AI to mobile devices"](https://venturebeat.com/ai/adobe-slimlm-the-ai-that-puts-cloud-scale-power-in-your-pocket/) and [Gadgets360](https://www.gadgets360.com/ai/news/adobe-slimlm-ai-offline-document-processing-on-device-without-internet-connectivity-developed-7080121)!

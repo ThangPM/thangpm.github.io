@@ -4,8 +4,8 @@ permalink: /cv/
 title: curriculum vitae
 nav: true
 nav_order: 1
-cv_pdf: CV_Thang.pdf
-description: # This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+cv_pdf: # Restore the download link after uploading an updated PDF.
+description: Senior Machine Learning Engineer in Adobe's Document Cloud Artificial Intelligence (DCAI) team. Experience, selected publications, and pending patent applications.
 toc:
   sidebar: left
 ---

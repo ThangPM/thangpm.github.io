@@ -1,3 +1,67 @@
+# Thang M. Pham's personal website
+
+A research-focused profile built on al-folio and Jekyll. The homepage, web CV, and metadata describe the current role; internal work details should never be added without clearance for public release.
+
+## Maintaining this site
+
+- Homepage and featured research: `_pages/about.md`; news: `_news/`; publications: `_bibliography/papers.bib`.
+- Update both `_data/cv.yml` and `assets/json/resume.json` when experience changes. The theme can render either format.
+- Homepage and CV publications are curated selections, not copies of the complete bibliography. Papers excluded from those selections can remain in the full publication list and news.
+- Patent applications are separate from publications and granted patents. `_data/patents.yml` supplies the homepage and YAML CV; mirror those entries in the JSON resume's custom `patents` section. Only generic topics and pending status are cleared for this site; do not add exact invention titles, application numbers, filing dates, screenshots, or technical details without separate public-disclosure clearance.
+- Verify publication metadata against publisher or DOI records. Use the online publication date for dated milestones, distinguish it from a later print year, and update existing preprint entries to the published version rather than creating duplicate papers. Keep featured-paper links, CV entries, and news consistent.
+- The old CV PDF link is disabled until an updated PDF is available. Replace `assets/pdf/CV_Thang.pdf`, then set `cv_pdf` in `_pages/cv.md`.
+- Demo posts/pages are excluded in `_config.yml`, not deleted. External demo feeds and blog archives are disabled. To publish original writing, enable the blog and only the original posts you intend to expose.
+- Visual styling lives in `_sass/_profile.scss`. Preserve light/dark themes and keyboard/mobile usability.
+- Keep motion restrained: `assets/js/common.js` reveals below-the-fold homepage sections once without hiding content beforehand. The introduction's decorative agent/tool loop has an 18-second cycle: task packets enter a harness-framed agent, branch to tool capabilities, and return results and evaluation feedback to context. It represents interests, not an actual architecture or runtime schedule. Motion pauses off-screen and in hidden tabs. Reduced motion retains static line art and disables packets, context pulses, reveals, card lifts, link transitions, and workflow fades.
+- Homepage social links keep visible text alongside decorative icons; Google Scholar uses `scholar_userid` from `_config.yml`.
+- The portrait sits above the ambient illustration on desktop and before the introduction on narrower screens. Keep its responsive image sizes aligned with the CSS (112px desktop, 96px at 991px and below), without overlapping the illustration. Homepage model-scope copy and conceptual workflow descriptions should not imply private architectures, persistent memory, or unverified production controls.
+- The homepage "How I work" section uses three concise principles from `approach` in `_pages/about.md`, with small decorative line-art emblems rather than illustrated topic cards. Research panels use lightweight SVG illustrations in `_includes/profile-visual.liquid`; their content and the career timeline are also maintained in `_pages/about.md`. Illustrations are conceptual, not measured evaluation results or product screenshots. Research artwork responds to card hover on fine pointers and keyboard focus with short CSS-only highlights and transitions, never autoplay loops or extra tab stops. Reduced motion disables SVG movement and transitions while retaining instant highlights. Section accents and timeline details stay non-interactive and free of additional labels or animation.
+- The full-width document intelligence workbench in `_includes/document-intelligence.liquid` is driven by `assets/js/document-intelligence.js`. The figure is the only stage selector; it explains sources/connectors, retrieval, agent/harness support, synthesis, attribution, and evaluation. Keep the diagram top-aligned, with short labels and no sidebar expanders. Each stage has a title and one-sentence explanation below the figure, without a separate walkthrough heading or example demo. It makes no model/API calls. A harness is execution support, not another coordinating agent; tools are capabilities, not invented autonomous agents. Evaluation represents dimensions to inspect, not a runtime gate or benchmark results. The diagram scrolls internally on narrow screens with hidden scrollbars and usable touch/keyboard navigation. Motion starts automatically with a short cue on stage selection, respects reduced-motion preferences, and pauses off-screen or in hidden tabs. Keep explanations usable without JavaScript; never add private names, routing rules, prompts, configurations, unpublished inventions, or unsupported ownership/performance claims.
+
+The workbench uses a full-width figure with explanations below. Animated document, vector-symbol, passage, citation, and trace tokens replace running dots. Stage highlights and explanations transition over 240ms without moving the diagram's nodes. The expanded upper layer distinguishes task routing, illustrative task agents, shared context, and harness-backed model/tool execution; it is not a fixed production topology. Vector symbols illustrate semantic matching, not actual embeddings or a private retrieval implementation. Its presentation loop advances every 5.2 seconds through sources, agents/tools, retrieval, synthesis, attribution, and evaluation; clicking a stage restarts there. There is no playback button; hidden-tab, off-screen, and reduced-motion states stop progression. This is a teaching sequence, not an exact runtime schedule. Decorative background dots and unlabelled activity bars are omitted.
+
+Arrows terminate at explicit nodes. Solid arrows show task flow or evidence; dashed arrows show source queries, shared-context return to task agents, or evaluation observations. Use one question input rather than duplicating it as a separate request.
+
+## Analytics
+
+The broken ClustrMaps globe has been removed. Standard Google Analytics 4 is the free dashboard used by this site. The existing measurement ID is retained in `_config.yml`; confirm it belongs to a property you control.
+
+Production builds load GA4 only after visitor consent. Local development does not load analytics. Advertising signals are disabled. The privacy page allows changing the choice. Other optional analytics providers remain disabled; enabling them requires a separate privacy/consent review.
+
+After deployment:
+
+1. In [Google Analytics](https://analytics.google.com/), open **Admin > Data streams > Web**. Confirm the stream URL is `https://thangpm.github.io` and the measurement ID matches `_config.yml`. If you cannot access the property, create a new free GA4 property and replace the ID.
+2. Visit the deployed site without an ad blocker, allow analytics, and check **Realtime** for your visit. Standard reports may take 24-48 hours.
+3. Use demographic details for country/region/city and acquisition reports for referrals. Names, professions, and employers cannot be inferred reliably and are not collected. Consent, blockers, VPNs, and reporting thresholds limit the data.
+4. Use the privacy page to decline and confirm subsequent navigation does not load `gtag/js`. Do not send personal information through analytics events or URLs.
+
+## Validation and deployment
+
+Use Ruby 3.3 (CI's runtime family), Bundler from `Gemfile.lock`, and Node for the existing Prettier checks:
+
+```sh
+bundle install
+JEKYLL_ENV=production bundle exec jekyll build
+node --test bin/analytics-consent.test.cjs
+node --test bin/document-intelligence.test.cjs
+npx prettier --check _pages/about.md _layouts/about.liquid _sass/_profile.scss assets/js/analytics-consent.js
+```
+
+The deploy workflow publishes `_site` to `gh-pages` on a push to `main`/`master`; GitHub Pages must serve that branch. Confirm Actions is enabled and the deploy run succeeds. Run PurgeCSS as CI does before final visual checks. Verify home, CV, publications, news, privacy, theme switching, and mobile navigation. Validate consent using a production build served locally; use development builds for ordinary previews.
+
+## Remaining content updates
+
+- Supply an updated downloadable CV and the confirmed end date of the 2024 internship (currently shown as the year only).
+- Check publications for post-2024 venue/status updates and add approved public work.
+- Add a current location only if desired; the stale Auburn location is no longer shown.
+- Configure Google Search Console verification if search indexing/reporting is wanted.
+- Review inherited workflows and external publication/repository badge services before enabling unused theme features.
+- The inherited Sass imports and some dependency APIs emit deprecation warnings. Plan a tested upstream theme/dependency refresh separately rather than upgrading the whole stack as part of a visual change.
+
+## Upstream theme
+
+The original al-folio documentation follows.
+
 # al-folio
 
 <div align="center">

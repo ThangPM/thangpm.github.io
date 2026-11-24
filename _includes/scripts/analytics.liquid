@@ -1,32 +1,32 @@
-{% if site.enable_google_analytics %}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-{% endif %}
-{% if site.enable_cronitor_analytics %}
-  <!-- Cronitor RUM -->
-  <script async src="https://rum.cronitor.io/script.js"></script>
-  <script>
-    window.cronitor =
-      window.cronitor ||
-      function () {
-        (window.cronitor.q = window.cronitor.q || []).push(arguments);
-      };
-    cronitor('config', { clientKey: '{{ site.cronitor_analytics }}' });
-  </script>
-{% endif %}
-{% if site.enable_pirsch_analytics %}
-  <script
-    defer
-    src="https://api.pirsch.io/pa.js"
-    id="pianjs"
-    data-code="{{ site.pirsch_analytics }}"
-  ></script>
+{% if jekyll.environment == 'production' %}
+  {% if site.enable_google_analytics and site.google_analytics != blank %}
+    <div id="analytics-consent" class="analytics-consent" role="region" aria-label="Analytics preferences" hidden>
+      <p>
+        Allow usage statistics? Google Analytics helps me understand readership and approximate geography. It does not tell me your name or
+        profession. <a href="{{ '/privacy/' | relative_url }}">Details</a>
+      </p>
+      <button type="button" class="profile-link-primary" data-analytics-consent="granted">Allow analytics</button>
+      <button type="button" class="profile-link-primary" data-analytics-consent="denied">No thanks</button>
+    </div>
+    <script
+      defer
+      id="analytics-script"
+      data-measurement-id="{{ site.google_analytics }}"
+      src="{{ '/assets/js/analytics-consent.js' | relative_url | bust_file_cache }}"
+    ></script>
+  {% endif %}
+  {% if site.enable_cronitor_analytics and site.cronitor_analytics != blank %}
+    <script async src="https://rum.cronitor.io/script.js"></script>
+    <script>
+      window.cronitor =
+        window.cronitor ||
+        function () {
+          (window.cronitor.q = window.cronitor.q || []).push(arguments);
+        };
+      cronitor('config', { clientKey: '{{ site.cronitor_analytics }}' });
+    </script>
+  {% endif %}
+  {% if site.enable_pirsch_analytics and site.pirsch_analytics != blank %}
+    <script defer src="https://api.pirsch.io/pa.js" id="pianjs" data-code="{{ site.pirsch_analytics }}"></script>
+  {% endif %}
 {% endif %}

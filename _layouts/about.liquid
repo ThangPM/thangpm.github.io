@@ -1,80 +1,183 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+<div class="post profile-home">
+  <header class="profile-hero" data-ambient-running="false">
+    <svg class="profile-ambient" viewBox="0 0 480 340" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="ambient-task">
+          <path d="M-7-10H2L7-5V10H-7ZM2-10V-5H7M-3 0H3M-3 4H1"/>
+        </g>
+      </defs>
+      <g class="ambient-harness">
+        <rect x="166" y="56" width="238" height="226" rx="28"/>
+        <path d="M166 90V76Q166 56 186 56H200M370 56H384Q404 56 404 76V90M166 248V262Q166 282 186 282H200M370 282H384Q404 282 404 262V248"/>
+      </g>
+      <g class="ambient-structure">
+        <path d="M96 170H198M250 156H278V116H310M250 184H278V236H310M360 116H390V236H360M390 170H424"/>
+        <path class="ambient-feedback" d="M390 170V288Q390 306 372 306H242Q224 306 224 288V200"/>
+        <path d="M60 146H84L96 158V194H60ZM84 146V158H96M69 170H86M69 180H81"/>
+        <rect x="310" y="91" width="50" height="50" rx="12"/>
+        <circle cx="332" cy="112" r="9"/>
+        <path d="M338 119L346 127"/>
+        <rect x="310" y="211" width="50" height="50" rx="12"/>
+        <path d="M322 226L330 236L322 246M337 246H347"/>
+        <path d="M424 146H448L460 158V194H424ZM448 146V158H460M432 175L438 181L451 167"/>
+      </g>
+      <path class="ambient-core" d="M224 140L250 155V185L224 200L198 185V155Z"/>
+      <g class="ambient-structure">
+        <path d="M224 155V185M211 162L237 178M211 178L237 162"/>
+        <rect class="ambient-state" x="280" y="291" width="50" height="30" rx="8"/>
+        <path d="M290 306L295 311L304 301M312 302H320M312 309H318"/>
+      </g>
+      <g class="ambient-packet ambient-packet-dispatch">
+        <use href="#ambient-task"/>
+      </g>
+      <g class="ambient-packet ambient-packet-search">
+        <use href="#ambient-task"/>
+      </g>
+      <g class="ambient-packet ambient-packet-execute">
+        <use href="#ambient-task"/>
+      </g>
+      <g class="ambient-packet ambient-packet-result">
+        <use href="#ambient-task"/>
+      </g>
+      <g class="ambient-packet ambient-packet-feedback">
+        <path d="M-8 0L-2 6L9-6"/>
+      </g>
+    </svg>
+    <div>
+      <p class="section-label">{{ page.subtitle }}</p>
+      <h1 class="profile-name">
+        {{ site.first_name }}
+        {{ site.middle_name }}
         {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+      </h1>
+      <p class="profile-headline">{{ page.headline }}</p>
+      <p class="profile-intro">{{ page.intro }}</p>
+      <div class="profile-actions" aria-label="Connect and explore">
+        <a class="profile-link profile-link-primary" href="{{ '/publications/' | relative_url }}"
+          >Explore research <span aria-hidden="true">&rarr;</span></a
+        >
+        <a class="profile-link" href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+        <a class="profile-link" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"
+          ><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a
+        >
+        <a class="profile-link" href="https://github.com/{{ site.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+        {% if site.scholar_userid %}
+          <a class="profile-link" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}"
+            ><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a
+          >
+        {% endif %}
+      </div>
+    </div>
+    {% if page.profile.image %}
+      <div class="profile-identity">
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class="img-fluid"
+          sizes="(max-width: 991px) 96px, 112px" width="112" height="112" alt=page.profile.image_alt cache_bust=true
+        %}
+        <p>
+          ML engineer.<br>
+          AI researcher. Systems builder.
+        </p>
+      </div>
+    {% endif %}
   </header>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+  {% include document-intelligence.liquid %}
 
-    <div class="clearfix">{{ content }}</div>
+  <section class="profile-section" aria-labelledby="approach-heading">
+    <h2 id="approach-heading">How I work</h2>
+    <div class="profile-grid approach-grid">
+      {% for item in page.approach %}
+        <article class="approach-principle">
+          <span class="principle-emblem" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+              {% case forloop.index %}
+                {% when 1 %}
+                  <rect class="principle-emblem-fill" x="6" y="6" width="14" height="14" rx="4"/>
+                  <rect x="28" y="28" width="14" height="14" rx="4"/>
+                  <path d="M20 13H29A6 6 0 0 1 35 19V28M28 35H19A6 6 0 0 1 13 29V20M30 23L35 28L40 23"/>
+                  <path d="M10 13L12 15L16 11M32 35H38"/>
+                {% when 2 %}
+                  <path class="principle-emblem-fill" d="M18 6H30V10H28V21L39 37A3 3 0 0 1 36 42H12A3 3 0 0 1 9 37L20 21V10H18Z"/>
+                  <path d="M17 28H31M19 35L23 38L30 31M20 10H28"/>
+                {% when 3 %}
+                  <rect class="principle-emblem-fill" x="7" y="7" width="23" height="23" rx="5"/>
+                  <rect x="18" y="18" width="23" height="23" rx="5"/>
+                  <path d="M18 24H30M24 18V30M12 13H19M29 35H36"/>
+              {% endcase %}
+            </svg>
+          </span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
 
-    <!-- News -->
-    {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+  <section class="profile-section profile-biography" aria-label="Background">
+    <div class="biography-copy">
+      {{ content }}
+      <a class="profile-text-link" href="{{ '/cv/' | relative_url }}">Experience & education <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <aside class="profile-journey" aria-labelledby="journey-heading">
+      <p class="section-label">Research meets engineering</p>
+      <h3 id="journey-heading">The path here</h3>
+      <ol>
+        {% for step in page.journey %}
+          <li>
+            <span class="journey-date">{{ step.date }}</span>
+            <h4>{{ step.title }}</h4>
+            <p>{{ step.detail }}</p>
+          </li>
+        {% endfor %}
+      </ol>
+      <a class="profile-text-link" href="{{ '/cv/' | relative_url }}">Full timeline <span aria-hidden="true">&rarr;</span></a>
+    </aside>
+  </section>
+
+  <section class="profile-section" aria-labelledby="research-heading">
+    <div class="profile-section-heading">
+      <h2 id="research-heading">Selected publications</h2>
+      <a class="profile-text-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="profile-grid research-grid">
+      {% for paper in page.research %}
+        <article class="profile-card research-card">
+          <div class="card-visual card-visual-{{ paper.visual }}">
+            <span class="research-topic">{{ paper.topic }}</span>
+            {% include profile-visual.liquid visual=paper.visual %}
+          </div>
+          <div class="card-content">
+            <p class="section-label">{{ paper.venue }}</p>
+            <h3>
+              <a href="{{ paper.url }}">{{ paper.title }}</a>
+            </h3>
+            <p>{{ paper.description }}</p>
+            <a class="research-read" href="{{ paper.url }}" aria-label="Read the {{ paper.title }} paper"
+              >Read paper <span aria-hidden="true">&#8599;</span></a
+            >
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if site.data.patents != blank %}
+    <section class="profile-section" aria-labelledby="patents-heading">
+      <h2 id="patents-heading">Patent applications</h2>
+      {% include patent-applications.liquid items=site.data.patents %}
+    </section>
+  {% endif %}
+
+  {% if page.news and site.announcements.enabled %}
+    <section class="profile-section" aria-labelledby="news-heading">
+      <h2 id="news-heading">Along the way</h2>
       {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter.enabled and site.footer_fixed %}
-      {% include scripts/newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+    </section>
+  {% endif %}
+  <script defer src="{{ '/assets/js/document-intelligence.js' | relative_url | bust_file_cache }}"></script>
 </div>

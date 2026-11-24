@@ -1,0 +1,14 @@
+<ul class="patent-list">
+  {% for patent in include.items %}
+    <li>
+      <svg class="patent-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M5 3H14L19 8V21H5ZM14 3V8H19M9 12H15M9 16H13"/>
+      </svg>
+      <div>
+        <p class="patent-title">{{ patent.name }}</p>
+        <p class="patent-type">U.S. patent application</p>
+      </div>
+      <span class="patent-status">{{ patent.status }}</span>
+    </li>
+  {% endfor %}
+</ul>

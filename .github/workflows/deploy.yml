@@ -10,7 +10,9 @@ on:
       - "**.bib"
       - "**.html"
       - "**.js"
+      - "**.cjs"
       - "**.liquid"
+      - "**.scss"
       - "**/*.md"
       - "**.yml"
       - "Gemfile"
@@ -37,7 +39,9 @@ on:
       - "**.bib"
       - "**.html"
       - "**.js"
+      - "**.cjs"
       - "**.liquid"
+      - "**.scss"
       - "**/*.md"
       - "**.yml"
       - "Gemfile"
@@ -89,6 +93,8 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Test interactive site behavior
+        run: node --test bin/analytics-consent.test.cjs bin/document-intelligence.test.cjs
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

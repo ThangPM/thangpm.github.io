@@ -2,31 +2,68 @@
 layout: about
 title: about
 permalink: /
-subtitle: Auburn, Alabama, USA   # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
+subtitle: Senior Machine Learning Engineer, Adobe DCAI
+headline: Research rigor.<br>Production impact.
+intro: >-
+  My work spans large and small language models, document intelligence, and agent systems. I connect retrieval, tools, and evidence-backed answers with evaluation that balances quality and responsiveness.
 profile:
-  align: right
-  image: thang_avatar_otw.jpg  # prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: # >
-    # <p>555 your office number</p>
-    # <p>123 your address street</p>
-    # <p>Your City, State 12345</p>
-
-news: true # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+  image: thang_avatar_otw.jpg
+  image_alt: Thang M. Pham
+approach:
+  - title: Follow the problem, not the boundary
+    description: >-
+      Trace failures across the full system, question assumptions, and stay with the issue through diagnosis, implementation, and verification.
+  - title: Let evidence challenge the idea
+    description: >-
+      Use controlled comparisons to understand quality, responsiveness, and resource trade-offs. Report mixed results honestly and revise conclusions when the evidence changes.
+  - title: Build for shared ownership
+    description: >-
+      Build systems others can use independently, share findings early, and invite challenges. Review for correctness, not personal preference.
+research:
+  - title: SlimLM
+    visual: slimlm
+    topic: On-device intelligence
+    venue: ACL / 2025
+    description: Small language models for document assistance on mobile devices.
+    url: https://aclanthology.org/2025.acl-demo.42/
+  - title: PEEB
+    visual: peeb
+    topic: Interpretable vision
+    venue: Findings of NAACL / 2024
+    description: Explainable and editable image classifiers with a language bottleneck.
+    url: https://aclanthology.org/2024.findings-naacl.131/
+  - title: PiC
+    visual: pic
+    topic: Language in context
+    venue: EACL / 2023
+    description: Phrase understanding and semantic search, evaluated in context.
+    url: https://aclanthology.org/2023.eacl-main.1/
+  - title: Out of Order
+    visual: order
+    topic: Language understanding
+    venue: Findings of ACL / 2021
+    description: Investigating word-order sensitivity and shortcuts in language understanding.
+    url: https://aclanthology.org/2021.findings-acl.98/
+journey:
+  - date: 2025 / Present
+    title: Adobe
+    detail: Senior Machine Learning Engineer (DCAI)
+  - date: 2019 / 2024
+    title: Auburn University
+    detail: Ph.D. in Computer Science
+  - date: 2017 / 2019
+    title: AIST, Japan
+    detail: ML / AI Research Engineer
+  - date: 2013 / 2017
+    title: Software engineering
+    detail: Communication applications
+news: true
 ---
 
-I recently completed my Ph.D. in Computer Science at Auburn University advised by [Prof. Anh Nguyen](https://anhnguyen.me/), and **I am actively seeking full-time research/engineering positions in machine learning and artificial intelligence**. My doctoral work has contributed to advancing language models' capabilities in understanding texts and images, with findings that have been recognized by [MIT Technology Review](https://www.technologyreview.com/2021/01/12/1016031/jumbled-up-sentences-ai-doesnt-understand-language-nlp-bert-fix/) and published in top-tier conferences including ACL, NAACL, or EACL. My current research interests are efficient small language models, model optimization, retrieval-augmented generation (RAG), and multi-agent systems.
+## Research depth. Engineering experience.
 
-During my Ph.D., I completed three research internships at [Adobe Research](https://research.adobe.com/) working with [Trung Bui](https://research.adobe.com/person/trung-bui/), [Franck Dernoncourt](https://research.adobe.com/person/franck-dernoncourt/) and [David Seunghyun Yoon](https://research.adobe.com/person/david-seunghyun-yoon/), where I developed efficient small language models for mobile devices, instruction-following and human preference datasets for image editing, and creating a dataset benchmark for semantic similarity and search. Before my Ph.D., I spent 6 years in industry roles, including 2.5 years as a Research Engineer at [National Institute of Advanced Industrial Science & Technology (AIST)](https://www.aist.go.jp/index_en.html) collaborating with [Makoto Miwa](https://www.toyota-ti.ac.jp/Lab/kde/members/makoto.miwa/) and [Mohammad Golam Sohrab](https://scholar.google.com/citations?user=PgHT-KgAAAAJ) to build deep learning systems in biomedical text mining. I also worked as a Software Engineer for 3.5 years, developing [over-the-top mobile applications](https://beowulfchain.com/) for distant communication.
-I completed my Honors Bachelor's Degree in Computer Science at the [University of Science (HCMUS)](https://en.hcmus.edu.vn/) in Vietnam, where my thesis focused on scene text detection and recognition.
+I'm a **Senior Machine Learning Engineer** in [Adobe](https://www.adobe.com/)'s **Document Cloud Artificial Intelligence (DCAI)** team, working on retrieval, grounded answers, evaluation, and production reliability. My experience spans software engineering, applied ML research, and production AI, connecting research questions with the practical demands of building useful systems.
 
-<!-- I'm particularly interested in making AI systems more interpretable and efficient, recently developing SlimLM models for on-device document assistance and creating methods to enhance the explainability and robustness of language models in NLP and CV tasks.  -->
+I started by building communication applications as a software engineer, then moved into biomedical text mining at [AIST in Japan](https://www.aist.go.jp/index_en.html). During my doctoral research, I completed three internships at [Adobe Research](https://research.adobe.com/), working with [Trung Bui](https://research.adobe.com/person/trung-bui/), [Franck Dernoncourt](https://research.adobe.com/person/franck-dernoncourt/), and [Seunghyun Yoon](https://research.adobe.com/person/david-seunghyun-yoon/) before joining Adobe full-time in March 2025.
 
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+I earned my **Ph.D. in Computer Science at Auburn University**, advised by [Prof. Anh Nguyen](https://anhnguyen.me/). My research explored how language and vision models understand their inputs, with publications at ACL, AACL, EACL, and NAACL. Our work on language understanding was featured in [MIT Technology Review](https://www.technologyreview.com/2021/01/12/1016031/jumbled-up-sentences-ai-doesnt-understand-language-nlp-bert-fix/). I hold an Honors bachelor's degree from [HCMUS](https://en.hcmus.edu.vn/) in Vietnam.

@@ -1,18 +1,11 @@
 {
   "basics": {
     "name": "Thang M. Pham",
-    "label": "Research Scientist",
+    "label": "Senior Machine Learning Engineer, Adobe DCAI",
     "email": "pmthangk09@gmail.com",
     "phone": "",
-    "url": "",
-    "summary": "Recently completed Ph.D. in Computer Science, specializing in Large Language Models and ML optimization. Seeking full-time research positions in AI/ML with focus on efficient LLMs, RAG systems, and multi-agent architectures.",
-    "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Auburn",
-      "countryCode": "US",
-      "region": "Alabama"
-    },
+    "url": "https://thangpm.github.io",
+    "summary": "Senior Machine Learning Engineer in Adobe's Document Cloud Artificial Intelligence (DCAI) team, with a Ph.D. in Computer Science from Auburn University. Work spans document intelligence, agent systems, retrieval and grounding, and evaluation for reliable production AI, with research in efficient small language models and on-device assistance.",
     "profiles": [
       {
         "network": "Google Scholar",
@@ -23,16 +16,29 @@
   },
   "work": [
     {
+      "name": "Adobe",
+      "position": "Senior Machine Learning Engineer",
+      "url": "https://www.adobe.com/",
+      "startDate": "2025-03",
+      "summary": "Document Cloud Artificial Intelligence (DCAI): document intelligence, agent systems, grounded answers, and production reliability.",
+      "highlights": [
+        "Work on retrieval, context selection, and harness-supported tool use for document intelligence and agent systems.",
+        "Evaluate evidence-backed answers through controlled comparisons of quality, responsiveness, and resource use.",
+        "Trace failures across the system, carrying issues through diagnosis, implementation, and verification.",
+        "Build for shared ownership through self-service workflows, knowledge sharing, and correctness-focused code review."
+      ]
+    },
+    {
       "name": "Creative Intelligence Lab, Adobe Inc.",
       "position": "Research Scientist Intern",
       "url": "",
       "startDate": "2024-06",
-      "endDate": "present",
-      "summary": "Working on efficient language models and on-device AI applications",
+      "endDate": "2024",
+      "summary": "Researched efficient small language models for on-device document assistance, published as SlimLM at ACL 2025 (System Demonstrations).",
       "highlights": [
-        "Quantized and deployed LLMs (0.1-7B parameters) locally on mobile devices",
-        "Developed SlimLM models pre-trained on trillion-scale tokens",
-        "Built mobile PDF reader with AI assistant"
+        "Evaluated trade-offs among model size, context length, and on-device inference time.",
+        "Studied document summarization, question answering, and question suggestion on mobile devices.",
+        "Developed an Android demonstration for on-device document assistance."
       ]
     },
     {
@@ -43,9 +49,9 @@
       "endDate": "2024-01",
       "summary": "Worked on LLMs for image editing",
       "highlights": [
-        "Fine-tuned open-source LLMs for image editing requests",
-        "Created instruction-following dataset for visual foundation models",
-        "Analyzed Reddit data for image editing trends"
+        "Researched language-model planning and tool use for image-editing tasks.",
+        "Constructed instruction-following and preference data for evaluating model behavior.",
+        "Fine-tuned and evaluated language models for generating and executing tool-use plans."
       ]
     },
     {
@@ -56,9 +62,9 @@
       "endDate": "2021-11",
       "summary": "Worked on phrase representation and semantic search",
       "highlights": [
-        "Developed neural models for phrase representation",
-        "Led team to construct dataset for semantic search",
-        "Built smart phrase search system for Acrobat"
+        "Researched contextual phrase representations and semantic search.",
+        "Developed dataset and benchmark methods for phrase understanding, published as PiC at EACL 2023.",
+        "Fine-tuned and evaluated language models on phrase understanding in context."
       ]
     },
     {
@@ -113,15 +119,24 @@
   ],
   "publications": [
     {
-      "name": "PEEB: Part-based Bird Classifiers With an Explainable and Editable Language Bottleneck",
+      "name": "SlimLM: An Efficient Small Language Model for On-Device Document Assistance",
+      "publisher": "Association for Computational Linguistics",
+      "releaseDate": "2025-07",
+      "url": "https://aclanthology.org/2025.acl-demo.42/",
+      "summary": "ACL 2025, System Demonstrations, pages 436-447."
+    },
+    {
+      "name": "PEEB: Part-based Image Classifiers with an Explainable and Editable Language Bottleneck",
       "publisher": "NAACL",
       "releaseDate": "2024",
+      "url": "https://aclanthology.org/2024.findings-naacl.131/",
       "summary": "Findings of NAACL 2024"
     },
     {
       "name": "PiC: A Phrase-in-Context Dataset for Phrase Understanding and Semantic Search",
       "publisher": "EACL",
       "releaseDate": "2023",
+      "url": "https://aclanthology.org/2023.eacl-main.1/",
       "summary": "Main conference paper at EACL 2023"
     },
     {
@@ -129,29 +144,48 @@
       "publisher": "AACL-IJCNLP",
       "releaseDate": "2022",
       "summary": "Oral presentation at AACL-IJCNLP 2022"
+    },
+    {
+      "name": "Out of Order: How important is the sequential order of words in a sentence in Natural Language Understanding tasks?",
+      "publisher": "Association for Computational Linguistics",
+      "releaseDate": "2021-08",
+      "url": "https://aclanthology.org/2021.findings-acl.98/",
+      "summary": "Findings of ACL-IJCNLP 2021, pages 1145-1160."
+    }
+  ],
+  "patents": [
+    {
+      "name": "Efficient small language models",
+      "status": "Pending"
+    },
+    {
+      "name": "Retrieval-augmented question answering",
+      "status": "Pending"
     }
   ],
   "skills": [
     {
+      "name": "AI Systems and Evaluation",
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "Agent Systems",
+        "Harness-Supported Tool Use",
+        "Context Selection",
+        "Grounding and Attribution",
+        "Answer Quality",
+        "Failure Analysis",
+        "Responsiveness and Resource Trade-offs"
+      ]
+    },
+    {
       "name": "Programming",
       "level": "Expert",
-      "keywords": [
-        "Python",
-        "Java",
-        "C++",
-        "PyTorch",
-        "TensorFlow"
-      ]
+      "keywords": ["Python", "Java", "C++", "PyTorch", "TensorFlow"]
     },
     {
       "name": "Machine Learning",
       "level": "Expert",
-      "keywords": [
-        "Large Language Models",
-        "Deep Learning",
-        "Natural Language Processing",
-        "Computer Vision"
-      ]
+      "keywords": ["Large Language Models", "Deep Learning", "Natural Language Processing", "Computer Vision"]
     }
   ],
   "languages": [
@@ -167,12 +201,7 @@
   "interests": [
     {
       "name": "Research Areas",
-      "keywords": [
-        "Efficient LLMs",
-        "Model Optimization",
-        "Retrieval-Augmented Generation",
-        "Multi-Agent Systems"
-      ]
+      "keywords": ["Large and Small Language Models", "On-Device AI", "Document Intelligence", "Agent Systems", "Grounding and Evaluation"]
     }
   ],
   "references": [
@@ -190,7 +219,7 @@
       "name": "SlimLM",
       "summary": "Efficient Small Language Models for On-Device Document Assistance",
       "highlights": ["Model Quantization", "Mobile Deployment", "Document Understanding"],
-      "url": ""
+      "url": "https://aclanthology.org/2025.acl-demo.42/"
     },
     {
       "name": "PEEB",
