@@ -3,49 +3,7 @@ layout: default
 ---
 <div class="post profile-home">
   <header class="profile-hero" data-ambient-running="false">
-    <svg class="profile-ambient" viewBox="0 0 480 340" aria-hidden="true" focusable="false">
-      <defs>
-        <g id="ambient-task">
-          <path d="M-7-10H2L7-5V10H-7ZM2-10V-5H7M-3 0H3M-3 4H1"/>
-        </g>
-      </defs>
-      <g class="ambient-harness">
-        <rect x="166" y="56" width="238" height="226" rx="28"/>
-        <path d="M166 90V76Q166 56 186 56H200M370 56H384Q404 56 404 76V90M166 248V262Q166 282 186 282H200M370 282H384Q404 282 404 262V248"/>
-      </g>
-      <g class="ambient-structure">
-        <path d="M96 170H198M250 156H278V116H310M250 184H278V236H310M360 116H390V236H360M390 170H424"/>
-        <path class="ambient-feedback" d="M390 170V288Q390 306 372 306H242Q224 306 224 288V200"/>
-        <path d="M60 146H84L96 158V194H60ZM84 146V158H96M69 170H86M69 180H81"/>
-        <rect x="310" y="91" width="50" height="50" rx="12"/>
-        <circle cx="332" cy="112" r="9"/>
-        <path d="M338 119L346 127"/>
-        <rect x="310" y="211" width="50" height="50" rx="12"/>
-        <path d="M322 226L330 236L322 246M337 246H347"/>
-        <path d="M424 146H448L460 158V194H424ZM448 146V158H460M432 175L438 181L451 167"/>
-      </g>
-      <path class="ambient-core" d="M224 140L250 155V185L224 200L198 185V155Z"/>
-      <g class="ambient-structure">
-        <path d="M224 155V185M211 162L237 178M211 178L237 162"/>
-        <rect class="ambient-state" x="280" y="291" width="50" height="30" rx="8"/>
-        <path d="M290 306L295 311L304 301M312 302H320M312 309H318"/>
-      </g>
-      <g class="ambient-packet ambient-packet-dispatch">
-        <use href="#ambient-task"/>
-      </g>
-      <g class="ambient-packet ambient-packet-search">
-        <use href="#ambient-task"/>
-      </g>
-      <g class="ambient-packet ambient-packet-execute">
-        <use href="#ambient-task"/>
-      </g>
-      <g class="ambient-packet ambient-packet-result">
-        <use href="#ambient-task"/>
-      </g>
-      <g class="ambient-packet ambient-packet-feedback">
-        <path d="M-8 0L-2 6L9-6"/>
-      </g>
-    </svg>
+    {% include model-core.liquid %}
     <div>
       <p class="section-label">{{ page.subtitle }}</p>
       <h1 class="profile-name">

@@ -191,127 +191,85 @@ button:focus-visible {
 }
 
 .profile-ambient {
+  --instrument-blue: #377eb6;
+  --instrument-teal: #168d98;
+  --instrument-surface: #f7fafc;
   position: absolute;
   z-index: -1;
-  right: 0;
-  bottom: 1rem;
-  width: 44%;
-  max-height: calc(100% - 11rem);
-  color: var(--global-theme-color);
+  left: 56%;
+  top: 0.8rem;
+  width: 14rem;
+  height: 8.3rem;
+  transform: translateX(-50%);
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 45%);
-  mask-image: linear-gradient(to right, transparent, #000 45%);
 
-  path,
-  rect,
-  circle,
-  use {
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  .instrument-teal {
+    fill: var(--instrument-teal);
   }
 }
 
-.ambient-harness {
-  opacity: 0.23;
-
-  rect {
-    stroke-dasharray: 5 8;
-  }
-
-  path {
-    stroke-width: 2;
-  }
+html[data-theme="dark"] .profile-ambient {
+  --instrument-blue: #79bce8;
+  --instrument-teal: #69d6cb;
+  --instrument-surface: #14222e;
 }
 
-.ambient-structure {
-  opacity: 0.36;
-
-  .ambient-feedback {
-    stroke-dasharray: 4 6;
-  }
-
-  .ambient-state {
-    fill: var(--global-bg-color);
-  }
-}
-
-.profile-ambient .ambient-core {
-  fill: currentColor;
-  fill-opacity: 0.05;
-  stroke-opacity: 0.5;
-  animation: ambient-context-cycle 18s ease-in-out infinite paused;
-}
-
-.ambient-packet {
+.instrument-packet {
+  fill: var(--instrument-teal);
   opacity: 0;
-  offset-rotate: 0deg;
-  animation: ambient-task-travel 18s linear infinite paused;
+  offset-rotate: auto;
+  animation: instrument-travel 12s linear infinite paused;
 }
 
-.profile-ambient #ambient-task path,
-.profile-ambient .ambient-packet use {
-  fill: var(--global-bg-color);
+.instrument-input {
+  offset-path: path("M10 82C60 82 75 94 117 94");
 }
 
-.ambient-packet-dispatch {
-  offset-path: path("M96 170H198");
-}
-
-.ambient-packet-search {
-  offset-path: path("M250 156H278V116H310");
+.instrument-tool {
+  offset-path: path("M196 65C220 48 244 45 267 52C282 75 245 92 208 97");
   animation-delay: 3s;
 }
 
-.ambient-packet-execute {
-  offset-path: path("M250 184H278V236H310");
-  animation-delay: 4s;
-}
-
-.ambient-packet-result {
-  offset-path: path("M360 116H390V170H424");
+.instrument-output {
+  offset-path: path("M209 110C240 108 270 106 307 106");
   animation-delay: 7s;
 }
 
-.ambient-packet-feedback {
-  offset-path: path("M390 170V288Q390 306 372 306H242Q224 306 224 288V200");
-  animation-delay: 10s;
+.instrument-activation {
+  animation: instrument-activate 12s ease-in-out infinite paused;
 }
 
-[data-ambient-running="true"] .ambient-packet,
-[data-ambient-running="true"] .ambient-core {
+[data-ambient-running="true"] .instrument-packet,
+[data-ambient-running="true"] .instrument-activation {
   animation-play-state: running;
 }
 
-@keyframes ambient-task-travel {
+@keyframes instrument-travel {
   0% {
     opacity: 0;
     offset-distance: 0%;
   }
-  3%,
-  15% {
-    opacity: 0.55;
+  5%,
+  25% {
+    opacity: 1;
   }
-  18%,
+  35%,
   100% {
     opacity: 0;
     offset-distance: 100%;
   }
 }
 
-@keyframes ambient-context-cycle {
+@keyframes instrument-activate {
   0%,
-  18%,
-  48%,
-  80%,
+  15%,
+  85%,
   100% {
-    fill-opacity: 0.05;
+    opacity: 0.14;
   }
-  24%,
-  68% {
-    fill-opacity: 0.18;
+  32%,
+  60% {
+    opacity: 0.9;
   }
 }
 
@@ -333,7 +291,7 @@ button:focus-visible {
 
 .profile-intro {
   max-width: 42rem;
-  color: var(--global-text-color-light);
+  color: var(--global-text-color);
   font-size: 1rem;
   line-height: 1.65;
 }
@@ -364,7 +322,7 @@ button:focus-visible {
 
   p {
     margin: 0;
-    color: var(--global-text-color-light);
+    color: var(--global-text-color);
     font-size: 0.8rem;
     text-align: center;
   }
@@ -983,6 +941,25 @@ html[data-theme="dark"] .hero-scene {
   }
 }
 
+@media (min-width: 1200px) {
+  .scene-body {
+    grid-template-columns: minmax(0, 1fr) 13rem;
+    gap: 1rem;
+  }
+
+  .scene-inspector {
+    align-self: stretch;
+    padding: 0.75rem 0 0 1rem;
+    border-top: 0;
+    border-left: 1px solid var(--global-divider-color);
+  }
+
+  .scene-description [data-scene-description] {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+}
+
 @keyframes scene-flow {
   to {
     stroke-dashoffset: -52;
@@ -1244,11 +1221,12 @@ html[data-theme="dark"] .hero-scene {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .profile-ambient .ambient-core {
+  .instrument-activation {
     animation: none;
+    opacity: 0.6;
   }
 
-  .ambient-packet {
+  .instrument-packet {
     animation: none;
     display: none;
   }
@@ -1276,6 +1254,14 @@ html[data-theme="dark"] .hero-scene {
 
   .scene-canvas {
     transform: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .profile-ambient {
+    top: 0.5rem;
+    width: 12.5rem;
+    height: 7.4rem;
   }
 }
 
@@ -1308,9 +1294,7 @@ html[data-theme="dark"] .hero-scene {
   }
 
   .profile-ambient {
-    width: 70%;
-    opacity: 0.55;
-    right: 0;
+    display: none;
   }
 
   .workbench-illustration {
