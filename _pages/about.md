@@ -3,9 +3,9 @@ layout: about
 title: about
 permalink: /
 subtitle: Senior Machine Learning Engineer, Adobe DCAI
-headline: Research rigor. Production impact.
+headline: Research-grounded. Built for real-world use.
 intro: >-
-  My work spans large and small language models, document intelligence, and agent systems. I build and evaluate workflows for retrieval, tool use, and reliable results.
+  I'm a Senior Machine Learning Engineer at Adobe, working on document intelligence and language-model systems. I focus on retrieval, grounded answers, evaluation, and production reliability, drawing on a background in software engineering and applied ML research.
 profile:
   image: thang_avatar_portrait.jpg
   image_alt: Thang M. Pham
@@ -13,9 +13,9 @@ approach:
   - title: Follow the problem, not the boundary
     description: >-
       Trace failures across the full system, question assumptions, and stay with the issue through diagnosis, implementation, and verification.
-  - title: Let evidence challenge the idea
+  - title: Evaluate the trade-offs
     description: >-
-      Use controlled comparisons to understand quality, responsiveness, and resource trade-offs. Report mixed results honestly and revise conclusions when the evidence changes.
+      Look beyond headline benchmark scores. Use controlled comparisons to understand failure modes and weigh quality, latency, and resource costs before choosing an approach.
   - title: Build for shared ownership
     description: >-
       Build systems others can use independently, share findings early, and invite challenges. Review for correctness, not personal preference.
@@ -24,25 +24,29 @@ research:
     visual: slimlm
     topic: On-device intelligence
     venue: ACL / 2025
-    description: Small language models for document assistance on mobile devices.
+    description: >-
+      Document assistance on a Samsung Galaxy S24, with an Android app and experiments mapping model size, context length, and inference-time trade-offs.
     url: https://aclanthology.org/2025.acl-demo.42/
   - title: PEEB
     visual: peeb
     topic: Interpretable vision
     venue: Findings of NAACL / 2024
-    description: Explainable and editable image classifiers with a language bottleneck.
+    description: >-
+      Part-based image classification using text descriptions. Users can edit those descriptions to create a new classifier without retraining.
     url: https://aclanthology.org/2024.findings-naacl.131/
   - title: PiC
     visual: pic
     topic: Language in context
     venue: EACL / 2023
-    description: Phrase understanding and semantic search, evaluated in context.
+    description: >-
+      A benchmark of about 28,000 contextualized noun phrases. Strong semantic-search scores masked weaknesses in distinguishing the same phrase's meanings across contexts.
     url: https://aclanthology.org/2023.eacl-main.1/
   - title: Out of Order
     visual: order
     topic: Language understanding
     venue: Findings of ACL / 2021
-    description: Investigating word-order sensitivity and shortcuts in language understanding.
+    description: >-
+      Across many GLUE tasks, 75-90% of correct predictions from BERT-based classifiers stayed unchanged after word shuffling, exposing reliance on superficial cues.
     url: https://aclanthology.org/2021.findings-acl.98/
 journey:
   - date: 2025 / Present
@@ -60,9 +64,9 @@ journey:
 news: true
 ---
 
-## Research depth. Engineering experience.
+## Experience & background
 
-I'm a **Senior Machine Learning Engineer** in [Adobe](https://www.adobe.com/)'s **Document Cloud Artificial Intelligence (DCAI)** team, working on retrieval, grounded answers, evaluation, and production reliability. My experience spans software engineering, applied ML research, and production AI, connecting research questions with the practical demands of building useful systems.
+At [Adobe](https://www.adobe.com/), I work in the **Document Cloud Artificial Intelligence (DCAI)** team. My engineering approach connects model evaluation with the practical demands of building and maintaining useful systems.
 
 I started by building communication applications as a software engineer, then moved into biomedical text mining at [AIST in Japan](https://www.aist.go.jp/index_en.html). During my doctoral research, I completed three internships at [Adobe Research](https://research.adobe.com/), working with [Trung Bui](https://research.adobe.com/person/trung-bui/), [Franck Dernoncourt](https://research.adobe.com/person/franck-dernoncourt/), and [Seunghyun Yoon](https://research.adobe.com/person/david-seunghyun-yoon/) before joining Adobe full-time in March 2025.
 

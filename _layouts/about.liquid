@@ -3,51 +3,51 @@ layout: default
 ---
 <div class="post profile-home">
   <header class="profile-hero" data-ambient-running="false">
-    {% include model-core.liquid %}
-    <div>
-      <p class="section-label">{{ page.subtitle }}</p>
-      <h1 class="profile-name">
-        {{ site.first_name }}
-        {{ site.middle_name }}
-        {{ site.last_name }}
-      </h1>
-      <p class="profile-headline">{{ page.headline }}</p>
-      <p class="profile-intro">{{ page.intro }}</p>
-      <div class="profile-actions" aria-label="Connect and explore">
-        <a class="profile-link profile-link-primary" href="{{ '/publications/' | relative_url }}"
-          >Explore research <span aria-hidden="true">&rarr;</span></a
-        >
-        <a class="profile-link" href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
-        <a class="profile-link" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"
-          ><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a
-        >
-        <a class="profile-link" href="https://github.com/{{ site.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
-        {% if site.scholar_userid %}
-          <a class="profile-link" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}"
-            ><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a
-          >
+    <div class="profile-copy">
+      <div class="profile-heading">
+        {% if page.profile.image %}
+          <div class="profile-identity">
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class="img-fluid"
+              sizes="(max-width: 575px) 72px, (max-width: 991px) 96px, 112px" width="112" height="112" alt=page.profile.image_alt cache_bust=true
+            %}
+          </div>
         {% endif %}
+        <div>
+          <p class="section-label">{{ page.subtitle }}</p>
+          <h1 class="profile-name">
+            {{ site.first_name }}
+            {{ site.middle_name }}
+            {{ site.last_name }}
+          </h1>
+          <p class="profile-headline">{{ page.headline }}</p>
+        </div>
       </div>
+      <p class="profile-intro">{{ page.intro }}</p>
     </div>
-    {% if page.profile.image %}
-      <div class="profile-identity">
-        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-        {%
-          include figure.liquid loading="eager" path=profile_image_path class="img-fluid"
-          sizes="(max-width: 991px) 96px, 112px" width="112" height="112" alt=page.profile.image_alt cache_bust=true
-        %}
-        <p>
-          ML engineer.<br>
-          AI researcher. Systems builder.
-        </p>
-      </div>
-    {% endif %}
+    {% include model-core.liquid %}
+    <div class="profile-actions" aria-label="Connect and explore">
+      <a class="profile-link profile-link-primary" href="{{ '/cv/' | relative_url }}"
+        >Experience & background <span aria-hidden="true">&rarr;</span></a
+      >
+      <a class="profile-link" href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+      <a class="profile-link" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"
+        ><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a
+      >
+      <a class="profile-link" href="https://github.com/{{ site.github_username }}"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      {% if site.scholar_userid %}
+        <a class="profile-link" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}"
+          ><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a
+        >
+      {% endif %}
+    </div>
   </header>
 
   {% include document-intelligence.liquid %}
 
   <section class="profile-section" aria-labelledby="approach-heading">
-    <h2 id="approach-heading">How I work</h2>
+    <h2 id="approach-heading">Engineering focus &amp; approach</h2>
     <div class="profile-grid approach-grid">
       {% for item in page.approach %}
         <article class="approach-principle">
@@ -76,13 +76,12 @@ layout: default
     </div>
   </section>
 
-  <section class="profile-section profile-biography" aria-label="Background">
+  <section class="profile-section profile-biography" aria-label="Experience and background">
     <div class="biography-copy">
       {{ content }}
       <a class="profile-text-link" href="{{ '/cv/' | relative_url }}">Experience & education <span aria-hidden="true">&rarr;</span></a>
     </div>
     <aside class="profile-journey" aria-labelledby="journey-heading">
-      <p class="section-label">Research meets engineering</p>
       <h3 id="journey-heading">The path here</h3>
       <ol>
         {% for step in page.journey %}
@@ -99,7 +98,7 @@ layout: default
 
   <section class="profile-section" aria-labelledby="research-heading">
     <div class="profile-section-heading">
-      <h2 id="research-heading">Selected publications</h2>
+      <h2 id="research-heading">Selected research</h2>
       <a class="profile-text-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a>
     </div>
     <div class="profile-grid research-grid">
@@ -124,17 +123,16 @@ layout: default
     </div>
   </section>
 
-  {% if site.data.patents != blank %}
-    <section class="profile-section" aria-labelledby="patents-heading">
-      <h2 id="patents-heading">Patent applications</h2>
-      {% include patent-applications.liquid items=site.data.patents %}
-    </section>
-  {% endif %}
-
   {% if page.news and site.announcements.enabled %}
     <section class="profile-section" aria-labelledby="news-heading">
       <h2 id="news-heading">Along the way</h2>
       {% include news.liquid limit=true %}
+    </section>
+  {% endif %}
+  {% if site.data.patents != blank %}
+    <section class="profile-section" aria-labelledby="patents-heading">
+      <h2 id="patents-heading">Patent applications</h2>
+      {% include patent-applications.liquid items=site.data.patents %}
     </section>
   {% endif %}
   <script defer src="{{ '/assets/js/document-intelligence.js' | relative_url | bust_file_cache }}"></script>
